@@ -43,3 +43,5 @@ $this->title = 'Find local bargains at BiddulphBargains';
     </div>
 </div>
 
+</div>
+
