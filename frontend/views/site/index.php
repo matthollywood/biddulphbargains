@@ -37,7 +37,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 			<div class="col-lg-4">
 			
 			
-				<?= Html::img('images/biddulph_high_street.jpeg', )	?>
+				<?= Html::img('images/biddulph_high_street.jpeg');	?>
 			
 			</div>
 			
