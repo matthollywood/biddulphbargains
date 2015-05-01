@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+use yii\helpers\Html;
 $this->title = 'Find local bargains at BiddulphBargains';
 ?>
 <div class="site-index">
