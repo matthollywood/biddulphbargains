@@ -33,6 +33,13 @@ $this->title = 'Find local bargains at BiddulphBargains';
 
               
             </div>
+			
+			<div class="col-lg-4">
+			
+				<img src="/frontend/images/Biddulph_high_street.jpg" alt="Biddulp High Street">			
+			
+			</div>
+			
            
         </div>
 
