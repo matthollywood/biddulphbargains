@@ -8,5 +8,5 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-search">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>This is the Search page. Here will be the search functionality for the website.</p>
+    <p>This is the Search page. Here will be the search functionality for the website. This is a test</p>
 </div>
