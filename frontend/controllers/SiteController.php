@@ -174,7 +174,7 @@ class SiteController extends Controller
         ]);
     }
 	
-	public function actionAddOffer()
+	public function actionAdd-Offer()
 	{
 		return $this->render('addOffer');
 	}
