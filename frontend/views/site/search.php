@@ -8,5 +8,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-search">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>This is the Search page. Here will be the search functionality for the website. This is a test</p>
+    <p>Welcome to BiddulphBargains</p>
+	<div>
+		<p>Enter the name of the store or the type of offer you're looking for below to find the latest deals in Biddulph</p>
+	</div>
 </div>
