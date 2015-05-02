@@ -8,7 +8,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>This is the About page. You may modify the following file to customize its content:</p>
+    <p>BiddulphBargains are committed to bringing you the latest and greatest offers and deals from the Biddulph High Street</p>
 
 
 </div>
