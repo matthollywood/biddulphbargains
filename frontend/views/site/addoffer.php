@@ -5,7 +5,7 @@ use yii\helpers\Html;
 $this->title = 'Add your offer';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-Add offer">
+<div class="site-addOffer">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Welcome to BiddulphBargains</p>
