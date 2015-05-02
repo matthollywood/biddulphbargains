@@ -173,4 +173,10 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+	
+	public function actionAddOffer()
+	{
+		return $this->render('addOffer');
+	}
+
 }
