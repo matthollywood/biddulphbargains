@@ -41,13 +41,14 @@ AppAsset::register($this);
             ];
             if (Yii::$app->user->isGuest) {
                     $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-					$menuItems[] = ['label' => 'Add your offer', 'url' => ['/site/addOffer']];
+					
             } else {
                 $menuItems[] = [
                     'label' => 'Logout ' . Yii::$app->user->identity->username . '',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ];
+				$menuItems[] = ['label' => 'Add your offer', 'url' => ['/site/addOffer']];
             }
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
