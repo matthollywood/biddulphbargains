@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-$this->title = 'Add your offer';
+$this->title = 'addOffer';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-addOffer">
