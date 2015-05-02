@@ -38,7 +38,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 			<div class="col-lg-4">
 			
 			
-				<?php echo Html::img('@web/images/Biddulph_high_street.jpg') ?>
+				<p> Will have an image of biddulph high street here </p>
 			
 			</div>
 			
