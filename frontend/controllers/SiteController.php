@@ -176,7 +176,19 @@ class SiteController extends Controller
 	
 	public function actionAdd()
 	{
-		return $this->render('add');
+		$model = new TblOffers();
+		if ($model->load(Yii::$app->request->post())) {
+        if ($model->validate()) {
+			$model->beforeSave();
+			$model->save();
+            return $this->redirect('index.php?r=site%2Fadd');
+			Yii::$app->getSession()->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
+        }
+    }
+
+    return $this->render('add', [
+        'model' => $model,
+    ]);
 	}
 
 }
