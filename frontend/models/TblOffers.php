@@ -33,9 +33,9 @@ class TblOffers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [[ 'offer_type', 'offer_description', 'start_date', 'end_date'], 'required'],
+            [[ 'offer_type', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
             [[ 'offer_type'], 'integer'],
-            [['start_date', 'end_date'], 'safe'],
+            [['offer_start_date', 'offer_end_date'], 'safe'],
             [['offer_description'], 'string', 'max' => 8000]
         ];
     }
@@ -50,8 +50,8 @@ class TblOffers extends \yii\db\ActiveRecord
             'id' => 'ID',
             'offer_type' => 'Offer Type',
             'offer_description' => 'Offer Description',
-            'start_date' => 'Start Date',
-            'end_date' => 'End Date',
+            'offer_start_date' => 'Start Date',
+            'offer_end_date' => 'End Date',
 			   ];
     }
 	    public function getofferId()

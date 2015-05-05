@@ -18,10 +18,9 @@ $this->params['breadcrumbs'][] = $this->title;
 			
 			<?= $form->field($model, 'offer_type') ?>
 			<?= $form->field($model, 'offer_description')->textArea(['rows' => 6])  ?>
-			<?= $form->field($model, 'start_date') ?>
-			<?= $form->field($model, 'end_date') ?>
-			<?= $form->field($model, 'store_id') ?>
-			
+			<?= $form->field($model, 'offer_start_date') ?>
+			<?= $form->field($model, 'offer_end_date') ?>
+						
 			<div class="form-group">
             <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
 			</div>
