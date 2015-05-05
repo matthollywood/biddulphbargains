@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		<div class="col-lg-5">
     <?php $form = ActiveForm::begin();?>
 			
-			<?= $form->field($model, 'offer_type_id') ?>
+			<?= $form->field($model, 'offer_type') ?>
 			<?= $form->field($model, 'offer_description')->textArea(['rows' => 6])  ?>
 			<?= $form->field($model, 'start_date') ?>
 			<?= $form->field($model, 'end_date') ?>
