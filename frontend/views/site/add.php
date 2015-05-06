@@ -2,8 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 use frontend\models\TblOffers;
 use frontend\models\TblOfferTypes;
+
 
 
 /* @var $this yii\web\View */
