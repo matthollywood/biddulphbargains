@@ -2,8 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use yii\web\IdentityInterface;
-use yii\jui\DatePicker;
+use frontend\models\TblOffers;
+use frontend\models\TblOfferTypes;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\TblOffers */
@@ -15,7 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
 	<div class = row>
 		<div class="col-lg-5">
     <?php $form = ActiveForm::begin();?>
-			
+			<?= $form->field($model, 'offer_type_id')
+					  ->dropDownList(
+					  ArrayHelper::map(TblOfferTypes::find()->all(),'offer_id','offer_type')
+					  )
+						?>
 			<?= $form->field($model, 'offer_type') ?>
 			<?= $form->field($model, 'offer_description')->textArea(['rows' => 6])  ?>
 			<?= $form->field($model, 'offer_start_date') ?>

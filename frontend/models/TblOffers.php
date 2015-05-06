@@ -33,8 +33,8 @@ class TblOffers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [[ 'offer_type', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
-            [[ 'offer_type'], 'integer'],
+            [[ 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
+            [[ 'offer_type_id'], 'integer'],
             [['offer_start_date', 'offer_end_date'], 'safe'],
             [['offer_description'], 'string', 'max' => 8000]
         ];
@@ -48,7 +48,7 @@ class TblOffers extends \yii\db\ActiveRecord
         return [
             
             'id' => 'ID',
-            'offer_type' => 'Offer Type',
+            'offer_type_id' => 'Offer Type',
             'offer_description' => 'Offer Description',
             'offer_start_date' => 'Start Date',
             'offer_end_date' => 'End Date',

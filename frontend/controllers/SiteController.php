@@ -183,7 +183,7 @@ class SiteController extends Controller
 			$model->beforeSave();
 			$model->save();
             return $this->redirect('index.php?r=site%2Fadd');
-			Yii::$app->getSession()->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
+			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
         }
     }
 
