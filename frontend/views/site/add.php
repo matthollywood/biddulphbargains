@@ -23,7 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
 					  ArrayHelper::map(TblOfferTypes::find()->all(),'offer_id','offer_type')
 					  )
 						?>
-			<?= $form->field($model, 'offer_type') ?>
 			<?= $form->field($model, 'offer_description')->textArea(['rows' => 6])  ?>
 			<?= $form->field($model, 'offer_start_date') ?>
 			<?= $form->field($model, 'offer_end_date') ?>
