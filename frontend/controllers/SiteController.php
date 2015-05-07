@@ -196,7 +196,7 @@ class SiteController extends Controller
 	
 		public function actionTermsandconditions()
 	{
-		return $this->render('Termsandconditions');
+		return $this->render('termsandconditions');
 	}
 
 

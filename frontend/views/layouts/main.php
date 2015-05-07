@@ -69,7 +69,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p>&copy; Designed, created and owned by Matthew Jones.<?= date('Y') ?>   <?= Html::a('Click here', ['site/Termsandconditions'])?> for terms and conditions.</p>
+        <p>&copy; Designed, created and owned by Matthew Jones.<?= date('Y') ?>   <?= Html::a('Click here', ['site/termsandconditions'])?> for terms and conditions.</p>
         </div>
     </footer>
 

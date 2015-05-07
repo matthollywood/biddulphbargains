@@ -7,7 +7,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<div class="site-termsAndConditions">
+<div class="site-termsandconditions">
  <h1><?= Html::encode($this->title) ?></h1>
  
  <p>Welcome to BiddulphBargains</p>
