@@ -194,7 +194,7 @@ class SiteController extends Controller
     ]);
 	}
 	
-		public function actionTermsAndConditions()
+		public function actionTermsandconditions()
 	{
 		return $this->render('termsAndConditions');
 	}
