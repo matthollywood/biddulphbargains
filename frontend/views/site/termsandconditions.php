@@ -10,10 +10,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-termsandconditions">
  <h1><?= Html::encode($this->title) ?></h1>
  
- <p>Welcome to BiddulphBargains</p>
+ <h2><p>Welcome to BiddulphBargains</p></h2>
 	<div>
-<p>Terms and conditions. <br>
-Welcome to our website. <br>
+<h3>Terms and conditions. </h3>
+<br>
+Welcome to our website. <br><br>
 If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our 
 relationship with you in relation to this website. <br>
 If you disagree with any part of these terms and conditions, please do not use our website.<br>
