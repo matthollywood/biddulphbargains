@@ -71,10 +71,6 @@ class SiteController extends Controller
         return $this->render('index');
     }
 	
-	public function actiontermsAndConditions()
-	{
-		return $this->render('termsAndConditions');
-	}
 
     public function actionLogin()
     {
@@ -197,5 +193,11 @@ class SiteController extends Controller
         'model' => $model,
     ]);
 	}
+	
+		public function actionTermsAndConditions()
+	{
+		return $this->render('termsAndConditions');
+	}
+
 
 }
