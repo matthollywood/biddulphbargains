@@ -71,7 +71,7 @@ class SiteController extends Controller
         return $this->render('index');
     }
 	
-	public function actionTermsAndConditions()
+	public function actiontermsAndConditions()
 	{
 		return $this->render('termsAndConditions');
 	}
