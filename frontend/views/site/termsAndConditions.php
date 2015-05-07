@@ -12,14 +12,16 @@ $this->params['breadcrumbs'][] = $this->title;
  
  <p>Welcome to BiddulphBargains</p>
 	<div>
-<p>]Terms and conditions template for website usage
-Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our <br>
-relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.<br>
-
+<p>Terms and conditions. <br>
+Welcome to our website. <br>
+If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our 
+relationship with you in relation to this website. <br>
+If you disagree with any part of these terms and conditions, please do not use our website.<br>
+<br>
 The term 'BiddulphBargains' or 'us' or 'we' refers to the owner of the website. The term 'you' refers to the user or viewer of our website.<br>
-
+<br>
 The use of this website is subject to the following terms of use:<br>
-
+<br>
 The content of the pages of this website is for your general information and use only. It is subject to change without notice.<br>
 This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the following personal information may be stored by us.<br>
 Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or 
