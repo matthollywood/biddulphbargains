@@ -44,6 +44,7 @@ AppAsset::register($this);
 					
             } else {
 				$menuItems[] = ['label' => 'Add your offer', 'url' => ['/site/add']];
+				$menuItems[] = ['label' => 'View Your Offers', 'url' => ['/your/index']];
                 $menuItems[] = [
                     'label' => 'Logout ' . Yii::$app->user->identity->username . '',
                     'url' => ['/site/logout'],
