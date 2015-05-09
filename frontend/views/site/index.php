@@ -19,7 +19,14 @@ $this->title = 'Find local bargains at BiddulphBargains';
 	<h1> </h1>
 
         <div class="row">
-            <div class="col-lg-4">
+		
+			<div class="col-lg-3">
+			
+			
+				<p></p>
+			
+			</div>
+            <div class="col-lg-6">
                 <h2></h2>
 
                 <p>Welcome to BiddulphBargains, your one stop shop for all the best deals and offers in Biddulph Town Centre. BiddulphBargains believe that getting a great deal 
@@ -28,7 +35,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 				
 			</div>
            			
-			<div class="col-lg-4">
+			<div class="col-lg-3">
 			
 			
 				<p></p>
