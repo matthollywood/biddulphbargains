@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					  )
 						?>
 			<?= $form->field($model, 'offer_description')->textArea(['rows' => 6])  ?>
-			<?= $form->field($model, 'start_date')->widget(DatePicker::className(), [
+			<?= $form->field($model, 'offer_start_date')->widget(DatePicker::className(), [
         'inline' => false, 
        // 'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
         'clientOptions' => [
@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'format' => 'yyyy-mm-dd'
         ]
 ]);?>
-			<?= $form->field($model, 'end_date')->widget(DatePicker::className(), [
+			<?= $form->field($model, 'offer_end_date')->widget(DatePicker::className(), [
         'inline' => false, 
        // 'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
         'clientOptions' => [
