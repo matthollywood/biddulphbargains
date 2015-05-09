@@ -32,7 +32,7 @@ class Your extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'offer_type_id', 'offer_description', 'start_date', 'end_date'], 'required'],
+            [['id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
             [['id', 'offer_type_id'], 'integer'],
             [['offer_start_date', 'offer_end_date'], 'safe'],
             [['offer_description'], 'string', 'max' => 8000]
