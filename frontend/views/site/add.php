@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use frontend\models\TblOffers;
 use frontend\models\TblOfferTypes;
-
+use dosamigos\datepicker\DatePicker;
 
 
 /* @var $this yii\web\View */
@@ -24,8 +24,22 @@ $this->params['breadcrumbs'][] = $this->title;
 					  )
 						?>
 			<?= $form->field($model, 'offer_description')->textArea(['rows' => 6])  ?>
-			<?= $form->field($model, 'offer_start_date') ?>
-			<?= $form->field($model, 'offer_end_date') ?>
+			<?= $form->field($model, 'start_date')->widget(DatePicker::className(), [
+        'inline' => false, 
+       // 'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'yyyy-mm-dd'
+        ]
+]);?>
+			<?= $form->field($model, 'end_date')->widget(DatePicker::className(), [
+        'inline' => false, 
+       // 'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'yyyy-mm-dd'
+        ]
+]);?>
 						
 			<div class="form-group">
             <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
