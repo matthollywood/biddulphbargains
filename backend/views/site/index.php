@@ -24,7 +24,7 @@ use yii\helpers\Html;
 				
 				<p>View your offers</p>
 
-                <p><a class="btn btn-default" Html::a('click here', ['site/signup'])?>View your offers &raquo;</a></p>
+                <p><?= Html::a('Your Offers', ['/site/index'], ['class' => 'btn btn-primary']) ?>View your offers &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Your Details</h2>
