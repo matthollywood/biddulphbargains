@@ -21,14 +21,11 @@ use yii\helpers\Html;
                 <h2>Your Offers</h2>
 
                 <p>Click the button below to add a new offer</p>
-				<br>
-				<?= Html::a('Add an Offer &raquo;', ['/site/add'], ['class' => 'btn btn-primary']) ?>
+				<p><?= Html::a('Add an Offer &raquo;', ['/site/add'], ['class' => 'btn btn-primary']) ?></p>
 				<br>
 				<p>View your offers</p>
-				<br>
-				<p>Click the button below to view, edit or remove your current offers<p>]
-				<br>
-                <p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
+				<p>Click the button below to view, edit or remove your current offers</p>
+				<p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
             </div>
             <div class="col-lg-4">
                 <h2>Your Details</h2>

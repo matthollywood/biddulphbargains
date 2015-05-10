@@ -81,4 +81,9 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+	
+	public function actionAdd()
+	{
+		return $this->render('add');
+	}
 }

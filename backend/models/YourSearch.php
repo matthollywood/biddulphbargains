@@ -1,11 +1,11 @@
 <?php
 
-namespace frontend\models;
+namespace backend\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\Your;
+use backend\models\Your;
 
 /**
  * YourSearch represents the model behind the search form about `frontend\models\Your`.
