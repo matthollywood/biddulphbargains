@@ -199,5 +199,8 @@ class SiteController extends Controller
 		return $this->render('termsandconditions');
 	}
 
-
+	public function actionEvents()
+	{
+		return $this->render('events');		
+	}
 }
