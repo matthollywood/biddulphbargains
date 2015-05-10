@@ -20,10 +20,7 @@ return [
             'password' => '',
             'charset' => 'utf8' 
 		]
-        'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => false,
-        ],
+       
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
