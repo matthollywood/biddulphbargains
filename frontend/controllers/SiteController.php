@@ -203,4 +203,9 @@ class SiteController extends Controller
 	{
 		return $this->render('events');		
 	}
+	
+	public function actionCategories()
+	{
+		return $this->render('categories');
+	}
 }

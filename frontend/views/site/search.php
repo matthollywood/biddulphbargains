@@ -10,6 +10,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>Welcome to BiddulphBargains</p>
 	<div>
-		<p>Enter the name of the store or the type of offer you're looking for below to find the latest deals in Biddulph</p>
+		<p>Enter the name of the store or the type of offer you're looking for below to find the latest deals in Biddulph.<br>
+		<br>
+		Alternatively you can <?= Html::a('click here', ['site/categories'])?> to see the list of offer types</p>
 	</div>
 </div>
