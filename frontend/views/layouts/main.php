@@ -9,7 +9,7 @@ use frontend\assets\NewAsset;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-NewAsset::register($this);
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
