@@ -9,18 +9,13 @@ $params = array_merge(
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'controllerNamespace' => 'backend\controllers',
     'components' => [
-		'db'=>[
-            'class'=>'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=usermanagementsystem',
-            'username' => 'root',
-            'password' => '',
-            'charset' => 'utf8' 
-		]
-       
+        'user' => [
+            'identityClass' => 'common\models\User',
+            'enableAutoLogin' => true,
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -36,3 +31,4 @@ return [
     ],
     'params' => $params,
 ];
+
