@@ -5,10 +5,11 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
+use frontend\assets\NewAsset;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
+NewAsset::register($this);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
