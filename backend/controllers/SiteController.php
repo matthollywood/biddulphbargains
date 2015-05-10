@@ -90,7 +90,7 @@ class SiteController extends Controller
 			$model->beforeSave();
 			$model->save();
 			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
-            return $this->redirect('/site/add');
+            return $this->redirect('index.php/site/add');
 			
         }
     }

@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model backend\models\Your */
 
 $this->title = 'Create Your';
-$this->params['breadcrumbs'][] = ['label' => 'Yours', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Update Your Offer', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="your-create">
