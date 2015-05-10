@@ -23,7 +23,6 @@ use yii\helpers\Html;
                 <p>Click the button below to add a new offer</p>
 				<p><?= Html::a('Add an Offer &raquo;', ['/site/add'], ['class' => 'btn btn-primary']) ?></p>
 				<br>
-				<p>View your offers</p>
 				<p>Click the button below to view, edit or remove your current offers</p>
 				<p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
             </div>

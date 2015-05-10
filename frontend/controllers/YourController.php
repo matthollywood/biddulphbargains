@@ -60,7 +60,7 @@ class YourController extends Controller
      */
     public function actionCreate()
     {
-        $model = new YourOffers();
+        $model = new Your();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->offer_id]);
