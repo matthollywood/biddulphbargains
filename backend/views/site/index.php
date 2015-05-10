@@ -1,7 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 
-$this->title = '' . Yii::$app->user->identity->username .''"'s Profile";
+$this->title = 'Your profile';
 use yii\helpers\Html;
 ?>
 <div class="site-index">
