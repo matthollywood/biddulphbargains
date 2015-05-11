@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'firstPageLabel' => 'First',
         'lastPageLabel' => 'Last',
 		],
-        'filterModel' => $searchModel,
+        
 		
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
