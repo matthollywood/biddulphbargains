@@ -209,7 +209,7 @@ class SiteController extends Controller
 	
 	public function actionCategories()
 	{
-		$provider = new \yii\data\ActiveDataProdier([
+		$provider = new \yii\data\ActiveDataProvider([
 		'query' => Catfind::find(),
 		'pagination' => [
 			'pageSize' => 10,
