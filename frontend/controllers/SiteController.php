@@ -206,6 +206,12 @@ class SiteController extends Controller
 	
 	public function actionCategories()
 	{
-		return $this->render('categories');
+		$searchModel = new YourSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('categories', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
 	}
 }
