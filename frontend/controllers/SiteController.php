@@ -15,6 +15,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use frontend\models\Your;
 use frontend\models\YourSearch;
+use frontend\models\Catfind;
 
 /**
  * Site controller
@@ -208,12 +209,12 @@ class SiteController extends Controller
 	
 	public function actionCategories()
 	{
-		$searchModel = new YourSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('categories', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+		$provider = new \yii\data\ActiveDataProdier([
+		'query' => Catfind::find(),
+		'pagination' => [
+			'pageSize' => 10,
+		],
+		]);
+		return $this->render('categories',['provider' => $provider]);
 	}
 }

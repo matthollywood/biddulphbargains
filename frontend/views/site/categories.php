@@ -12,23 +12,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>Select the type of offer you're looking for to display all offers in the area.</p>
 
     <?= ListView::widget([
-        'dataProvider' => $dataProvider,
-		'pager' => [
-        'firstPageLabel' => 'First',
-        'lastPageLabel' => 'Last',
-		],
-        
-		
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'offer_id',
-            'offerType.offer_type',
-            'offer_description',
-            'start_date',
-            'end_date',
-
-            
-        ],
+        'dataProvider' => $provider,
     ]); ?>
 </div>
