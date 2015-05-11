@@ -26,9 +26,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'offerType.offer_type',
             'offer_description',
             'start_date',
-             'end_date',
+            'end_date',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            
         ],
     ]); ?>
 </div>
