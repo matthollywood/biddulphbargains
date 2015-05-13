@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= ListView::widget([
 		'dataProvider' => $provider,
-		'itemView' => function($model),
+		'itemView' => function($model)
 	{return'<div class="row">
 	<div class="col-md-4">
 		<div class="list-group">
