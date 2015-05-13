@@ -16,7 +16,6 @@ use yii\filters\AccessControl;
 use frontend\models\Your;
 use frontend\models\YourSearch;
 use frontend\models\Catfind;
-use frontend\models\Catcount;
 
 /**
  * Site controller
@@ -210,18 +209,13 @@ class SiteController extends Controller
 	
 	public function actionCategories()
 	{
+		$summary = null;
 		$provider = new \yii\data\ActiveDataProvider([
 		'query' => Catfind::find(),
 		'pagination' => [
 			'pageSize' => 10,
 		],
 		]);
-		$count = new \yii\data\ActiveDataProvider([
-		'query' => Catcount::find()
-		->select(['offer_type_id','COUNT(*) AS number'])
-		->groupBy(['offer_type_id'])
-		->all()
-		]);
-		return $this->render('categories',['provider' => $provider, 'count' => $count]);
+		return $this->render('categories',['provider' => $provider]);
 	}
 }
