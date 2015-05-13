@@ -219,7 +219,7 @@ class SiteController extends Controller
 		'query' => Catfind::find()
 		->select(['offer_type_id','COUNT(*) AS number'])
 		->groupBy(['offer_type_id'])
-		->all();
+		->all()
 		]);
 		return $this->render('categories',['provider' => $provider, 'count' => $count]);
 	}
