@@ -14,9 +14,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= ListView::widget([
         'dataProvider' => $provider,
 		'itemView' => function($model)
-		$summary = null
+		
 		{
-			return'
+			return
+			$summary = null'
 <div class="row">
 	<div class="col-md-4">
 		<div class="list-group">
