@@ -16,6 +16,7 @@ use yii\filters\AccessControl;
 use frontend\models\Your;
 use frontend\models\YourSearch;
 use frontend\models\Catfind;
+use frontend\models\Catcount;
 
 /**
  * Site controller
@@ -216,7 +217,7 @@ class SiteController extends Controller
 		],
 		]);
 		$count = new \yii\data\ActiveDataProvider([
-		'query' => Catfind::find()
+		'query' => Catcount::find()
 		->select(['offer_type_id','COUNT(*) AS number'])
 		->groupBy(['offer_type_id'])
 		->all()
