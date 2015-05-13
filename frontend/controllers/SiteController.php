@@ -16,6 +16,7 @@ use yii\filters\AccessControl;
 use frontend\models\Your;
 use frontend\models\YourSearch;
 use frontend\models\Catfind;
+use frontend\models\Catresults;
 
 /**
  * Site controller
@@ -218,5 +219,20 @@ class SiteController extends Controller
 		
 		]);
 		return $this->render('categories',['provider' => $provider]);
+	}
+	
+	public function actionCategorieslanding()
+	{
+		$provider = new \yii\data\ActiveDataProvider([
+		'query' => TblOffers::find(),
+		'pagination' => [
+			'pageSize' => 10,
+		],
+		
+		]);
+		return $this->render('categorieslanding',['provider' => $provider]);
+		
+		
+		
 	}
 }
