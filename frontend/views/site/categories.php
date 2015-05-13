@@ -15,11 +15,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $provider,
 		'itemView' => function($model)
 		{
-			return'<div class="list-group">
+			return'
+<div class="row">
+	<div class="col-md-4">
+		<div class="list-group">
   <a href="#" class="list-group-item active">
     <h4 class="list-group-item-heading">' .$model->offer_type. '</h4>
     <p class="list-group-item-text"></p>
   </a>
+		</div>
+	</div>
 </div>';
 		}
     ]); ?>
