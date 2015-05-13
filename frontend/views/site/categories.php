@@ -12,9 +12,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>Select the type of offer you're looking for to display all offers of that type in the area.</p>
 
     <?= ListView::widget([
-        'dataProvider' => $provider,
-		'itemView' => function($model),
 		'summary' => null,
+        'dataProvider' => $provider,
+		'itemView' => function($model)
+		
 		
 		{return'<div class="row">
 	<div class="col-md-4">
