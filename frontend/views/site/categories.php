@@ -25,6 +25,6 @@ $this->params['breadcrumbs'][] = $this->title;
 	</div>
 </div>';
 		},
-		'summary' => null
+		'layout' => '{items}{pager}',
     ]); ?>
 </div>
