@@ -1,8 +1,6 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper;
 $this->title = 'Find local bargains at BiddulphBargains';
 ?>
 <div class="site-index">
@@ -11,13 +9,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
         <h1>Biddulph Bargains</h1>
 		
 		<p> Find the best and most recent deals here at BiddulphBargains</p>
- <?php $form = ActiveForm::begin();?>
- 
- <?= $form->field ?>
- 			<div class="form-group">
-            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
-			</div>
-	<?php ActiveForm::end(); ?>
+
         
     </div>
 
