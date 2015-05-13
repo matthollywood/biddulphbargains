@@ -2,7 +2,7 @@
 namespace frontend\models;
 use yii\db\ActiveRecord;
 
-class Catfind extends ActiveRecord
+class Catcount extends ActiveRecord
 {
 
 	public static function tableName()
