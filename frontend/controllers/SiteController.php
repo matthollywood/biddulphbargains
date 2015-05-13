@@ -215,7 +215,7 @@ class SiteController extends Controller
 		'pagination' => [
 			'pageSize' => 10,
 		],
-		'summary' => null,
+		
 		]);
 		return $this->render('categories',['provider' => $provider]);
 	}
