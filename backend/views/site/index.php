@@ -21,7 +21,7 @@ use yii\helpers\Html;
                 <h2>Your Offers</h2>
 
                 <p>Click the button below to add a new offer</p>
-				<p><?= Html::a('Add an Offer &raquo;', ['/site/add'], ['class' => 'btn btn-primary']) ?></p>
+				<p><?= Html::a('Add an Offer &raquo;', ['/your/create'], ['class' => 'btn btn-primary']) ?></p>
 				<br>
 				<p>Click the button below to view, edit or remove your current offers</p>
 				<p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
@@ -30,17 +30,18 @@ use yii\helpers\Html;
                 <h2>Your Details</h2>
 
                 <p>Click the button below to reset your password</p>
-				<p>Click the button below to update your email address</p>
+				<p><?= Html::a('Add an Offer &raquo;', ['/your/create'], ['class' => 'btn btn-primary']) ?></p>
 				
+				<p>Click the button below to update your email address</p>
+				<p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Payment Information</h2>
 
                 <p>Click the button below to view payment details</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                <p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
             </div>
         </div>
 
