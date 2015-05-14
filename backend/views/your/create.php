@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Your */
 
-$this->title = 'Create Your';
+$this->title = 'Create Your Offer';
 $this->params['breadcrumbs'][] = ['label' => 'Update Your Offer', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

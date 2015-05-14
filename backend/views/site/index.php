@@ -31,7 +31,7 @@ use yii\helpers\Html;
 
                 <p>Click the button below to reset your password</p>
 				<p><?= Html::a('Add an Offer &raquo;', ['/your/create'], ['class' => 'btn btn-primary']) ?></p>
-				
+				<br>
 				<p>Click the button below to update your email address</p>
 				<p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
 

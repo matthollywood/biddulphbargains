@@ -11,10 +11,15 @@ return [
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
+                   'transport' => [
+             'class' => 'Swift_SmtpTransport',
+             'host' => 'mvnr.biddulphbargains.co.uk', 
+             'username' => 'matthew.jones@biddulphbargains.co.uk',
+             'password' => 'royksopp1',
+             'port' => '587', // Port 25 is a very common port too
+             // It is often used, check your provider or mail server specs
+         ],
+            'useFileTransport' => false,
         ],
     'urlManager' => [
         'class' => 'yii\web\UrlManager',
