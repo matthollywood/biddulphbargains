@@ -61,6 +61,12 @@ class YourController extends Controller
     public function actionCreate()
     {
         $model = new Your();
+		
+		if(Yii::$app->request->isAjax && $model->load($_POST))
+		{
+			Yii::$app->responsive->format = 'json';
+			return \yii\widgets\ActiveForm::validate($model);			
+		}
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->offer_id]);

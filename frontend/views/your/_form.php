@@ -14,7 +14,7 @@ use dosamigos\datepicker\DatePicker;
 <div class="your-form">
 	<div class = row>
 		<div class="col-lg-5">
-    <?php $form = ActiveForm::begin(['enableAjacValidation'=>true]); ?>
+    <?php $form = ActiveForm::begin(['enableAjaxValidation'=>true]); ?>
 
         <?php $form = ActiveForm::begin();?>
 			<?= $form->field($model, 'offer_type_id')
