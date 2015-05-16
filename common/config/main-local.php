@@ -16,7 +16,7 @@ return [
              'host' => 'imap.1and1.co.uk', 
              'username' => 'matthew.jones@biddulphbargains.co.uk',
              'password' => 'royksopp1',
-             'port' => '143', // Port 25 is a very common port too
+             'port' => '25', // Port 25 is a very common port too
              // It is often used, check your provider or mail server specs
          ],
             'useFileTransport' => false,

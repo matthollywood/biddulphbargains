@@ -34,10 +34,24 @@ class Your extends \yii\db\ActiveRecord
         return [
             [['id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
             [['id', 'offer_type_id'], 'integer'],
+			['offer_start_date', 'checkDate'],
             [['offer_start_date', 'offer_end_date'], 'safe'],
             [['offer_description'], 'string', 'max' => 8000]
         ];
     }
+	
+	public function checkDate($attribute,$params)
+	
+	{
+		$today = date('yyyy-mm-dd');
+		$selectedDate = date($this>offer_start_date);
+		if($selectedDate < $today)
+		{
+			$this->addError($attribute,"Offer start date must be today's date or greater");
+		}
+		
+		
+	}
 
     /**
      * @inheritdoc
