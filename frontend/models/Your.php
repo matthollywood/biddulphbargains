@@ -45,7 +45,7 @@ class Your extends \yii\db\ActiveRecord
 	{
 		$today = date('yyyy-mm-dd');
 		$selectedDate = date($this>offer_start_date);
-		if($selectedDate < $today)
+		if($selectedDate > $today)
 		{
 			$this->addError($attribute,"Offer start date must be today's date or greater");
 		}
