@@ -43,7 +43,6 @@ class Your extends \yii\db\ActiveRecord
 	public function checkDate($attribute,$params)
 	
 	{
-		$today = date('Y-m-d');
 		$selectedDate = date($this>offer_start_date);
 		if($selectedDate > $today)
 		{
