@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		}
 	}else{
 		?>
-			<p>Ops! Seems like no offer exist with such keyterm.</p>
+			<p>Ops! Seems like there's no offers like that at the moment. You could try again or check back soon!.</p>
 			<p><?= Html::a('Try again', ['site/search'])?></p>
 		<?php
 	}
