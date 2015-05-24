@@ -30,6 +30,7 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
+			'urlFormat'=>'path',
             'showScriptName' => false,
             'rules'=>array(
                 '<controller:\w+>/<action:\w+>/<id:[a-zA-Z0-9-]+>' => '<controller>/<action>', '<controller:\w+>/<id:\d+>'=>'<controller>/view',
