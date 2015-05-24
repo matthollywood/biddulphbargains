@@ -22,22 +22,12 @@ $this->title = 'Find local bargains at BiddulphBargains';
 
             <div class="span12">
                 <form action="categorieslanding" method="post">
-					<div class="row">
-					<div class="col-md-3">
-					</div>
-						<div class="col-md-6">
-							<div class="form-group">
-			        <input type="text" name="keyword" placeholder="Search" class="form-control">
-							</div>
-							
-						</div>
-						<div class="col-md-3"
 					<div class="form-group">
-			            <?= Html::submitButton('Search', ['class' => 'btn btn-primary', 'name' => 'Search']) ?>
+			        <input type="text" name="keyword" placeholder="Search" class="form-control">
+					</div>
+					<div class="form-group">
+			            <?= Html::submitButton('Search', ['class' => 'btn btn-primary', 'name' => 'submit']) ?>
 			        </div>
-					</div>
-					</div>
-
 		        </form>
 
                 <p>Welcome to BiddulphBargains, your one stop shop for all the best deals and offers in Biddulph Town Centre. BiddulphBargains believe that getting a great deal 
