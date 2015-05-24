@@ -49,11 +49,11 @@ AppAsset::register($this);
 				
             ];
             if (Yii::$app->user->isGuest) {
-                    $menuItems[] = ['label' => 'Login', 'url' => ['../../backend/view/site/login']];
+                    $menuItems[] = ['label' => 'Login', 'url' => ['../../backend/web/site/login']];
 					
             } else {
-				$menuItems[] = ['label' => 'Add your offer', 'url' => ['../../backend/view/offers/create']];
-				$menuItems[] = ['label' => 'View Your Offers', 'url' => ['../../backend/view/offers/index']];
+				$menuItems[] = ['label' => 'Add your offer', 'url' => ['../../backend/web/offers/create']];
+				$menuItems[] = ['label' => 'View Your Offers', 'url' => ['../../backend/web/offers/index']];
                 $menuItems[] = [
                     'label' => 'Logout ' . Yii::$app->user->identity->username . '',
                     'url' => ['/site/logout'],
