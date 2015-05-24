@@ -7,6 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $model backend\models\TblOffersSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
+ 
 
 <div class="tbl-offers-search">
 
