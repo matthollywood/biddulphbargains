@@ -23,6 +23,7 @@ use frontend\models\Catresults;
  */
 class SiteController extends Controller
 {
+    public $enableCsrfValidation = false;
     /**
      * @inheritdoc
      */
@@ -124,7 +125,11 @@ class SiteController extends Controller
 	
 	public function actionSearch()
 	{
-		return $this->render('search');
+        if(isset($_POST['submit'])){
+            $keyword = $_POST['keyword'];
+
+        }
+        return $this->render('search');
 	}
 
     public function actionSignup()
@@ -184,18 +189,17 @@ class SiteController extends Controller
 	{
 		$model = new TblOffers();
 		if ($model->load(Yii::$app->request->post())) {
-        if ($model->validate()) {
-			$model->beforeSave();
-			$model->save();
-			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
-            return $this->redirect('/index.php/site/add');
-			
+            if ($model->validate()) {
+    			$model->beforeSave();
+    			$model->save();
+    			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
+                return $this->redirect('/index.php/site/add');
+    			
+            }
         }
-    }
-
-    return $this->render('add', [
-        'model' => $model,
-    ]);
+        return $this->render('add', [
+            'model' => $model,
+        ]);
 	}
 	
 		public function actionTermsandconditions()
@@ -220,19 +224,30 @@ class SiteController extends Controller
 		]);
 		return $this->render('categories',['provider' => $provider]);
 	}
+
+    private function getTypeIDFromName($id){
+        $final = str_replace('-',' ',$id);
+        $record = Catfind::findOne(['offer_type'=>$final]);
+        return $record? $record->offer_id : 0;
+    }
 	
-	public function actionCategorieslanding()
+	public function actionCategorieslanding($id=0)
 	{
-		$provider = new \yii\data\ActiveDataProvider([
-		'query' => TblOffers::find(),
-		'pagination' => [
-			'pageSize' => 10,
-		],
-		
-		]);
-		return $this->render('categorieslanding',['provider' => $provider]);
-		
-		
-		
+        $this->enableCsrfValidation = false;
+        if(isset($_POST['submit'])){
+            $id = $_POST['keyword'];
+        }
+        $tid = $this->getTypeIDFromName($id);
+        
+        $rows = (new \yii\db\Query())
+            ->select(['offer_id','offer_description','offer_start_date','offer_end_date'])
+            ->from('tbl_offers')
+            ->where(['like','offer_description' , $id])
+            ->orWhere(['offer_start_date'=>$id])
+            ->orWhere(['offer_end_date'=>$id])
+            ->orWhere(['offer_type_id'=>$tid])
+            ->limit(10)
+            ->all();
+        return $this->render('categorieslanding',['model' => $rows,'web'=>$id]);
 	}
 }

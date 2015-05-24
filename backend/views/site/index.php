@@ -3,6 +3,7 @@
 
 $this->title = 'Your profile';
 use yii\helpers\Html;
+use yii\helpers\BaseUrl;
 ?>
 <div class="site-index">
 
@@ -19,29 +20,23 @@ use yii\helpers\Html;
         <div class="row">
             <div class="col-lg-4">
                 <h2>Your Offers</h2>
-
                 <p>Click the button below to add a new offer</p>
-				<p><?= Html::a('Add an Offer &raquo;', ['/your/create'], ['class' => 'btn btn-primary']) ?></p>
+				<p><?= Html::a('Add an Offer &raquo;', ['/offers/create'], ['class' => 'btn btn-primary']) ?></p>
 				<br>
 				<p>Click the button below to view, edit or remove your current offers</p>
-				<p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
+				<p><?= Html::a('Your Offers &raquo;', ['/offers/index'], ['class' => 'btn btn-primary']) ?></p>
             </div>
             <div class="col-lg-4">
                 <h2>Your Details</h2>
 
                 <p>Click the button below to reset your password</p>
-				<p><?= Html::a('Add an Offer &raquo;', ['/your/create'], ['class' => 'btn btn-primary']) ?></p>
-				<br>
-				<p>Click the button below to update your email address</p>
-				<p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
-
+			
             </div>
             <div class="col-lg-4">
-                <h2>Payment Information</h2>
+                <h2>Manage Store Owners</h2>
 
-                <p>Click the button below to view payment details</p>
-
-                <p><?= Html::a('Your Offers &raquo;', ['/your/index'], ['class' => 'btn btn-primary']) ?></p>
+                <p><?= Html::a('Manage Users &raquo;', ['/storeowners/index'], ['class' => 'btn btn-primary']) ?></p>
+                
             </div>
         </div>
 

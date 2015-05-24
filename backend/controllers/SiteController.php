@@ -5,8 +5,11 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use app\models\LoginForm;
+use backend\models\SignupForm;
 use yii\filters\VerbFilter;
 use backend\models\TblOffers;
+use backend\models\TblStores;
+
 
 /**
  * Site controller
@@ -23,7 +26,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login','signup', 'error'],
                         'allow' => true,
                     ],
                     [
@@ -36,7 +39,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['post','get'],
                 ],
             ],
         ];
@@ -66,12 +69,40 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        if ($model->load(Yii::$app->request->post()) && $model->login() ) {
+            if($model->user->status == 1 || $model->user->status == 0){
+                return $this->redirect('logout');
+            }
             return $this->goBack();
         } else {
             return $this->render('login', [
                 'model' => $model,
             ]);
+        }
+    }
+
+    public function actionSignup(){
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            if ($user = $model->signup()) {
+                $this->insertShop(Yii::$app->request->post('storename'),$user->id);
+                //if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                //}
+            }
+        }
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
+        
+    }
+
+    private function insertShop($shopName,$id){
+        $store = new TblStores();
+        $store->store_name = $shopName;
+        $store->user_id = $id;
+        if ($store->save()) {
+            return $store;
         }
     }
 
@@ -82,7 +113,7 @@ class SiteController extends Controller
         return $this->goHome();
     }
 	
-	public function actionAdd()
+	/*public function actionAdd()
 	{
 		$model = new TblOffers();
 		if ($model->load(Yii::$app->request->post())) {
@@ -98,5 +129,5 @@ class SiteController extends Controller
     return $this->render('add', [
         'model' => $model,
     ]);
-	}
+	}*/
 }

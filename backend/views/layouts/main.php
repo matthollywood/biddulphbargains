@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+use yii\helpers\BaseUrl;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -25,8 +26,8 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
-                'brandUrl' => Yii::$app->homeUrl,
+                'brandLabel' => 'BIDDULPH BARGAINS',
+                'brandUrl' => BaseUrl::base(true).'/../../frontend/web/site/index',
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],

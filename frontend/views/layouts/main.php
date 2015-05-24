@@ -6,6 +6,10 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
 use frontend\assets\NewAsset;
+use yii\helpers\Url;
+use yii\helpers\BaseUrl;
+
+
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -23,6 +27,9 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+    <?php 
+    $host = Url::base();
+    ?>
     <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
@@ -45,8 +52,8 @@ AppAsset::register($this);
                     $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
 					
             } else {
-				$menuItems[] = ['label' => 'Add your offer', 'url' => ['/your/create']];
-				$menuItems[] = ['label' => 'View Your Offers', 'url' => ['/your/index']];
+				$menuItems[] = ['label' => 'Add your offer', 'url' => ['../../backend/web/offers/create']];
+				$menuItems[] = ['label' => 'View Your Offers', 'url' => ['../../backend/web/offers/index']];
                 $menuItems[] = [
                     'label' => 'Logout ' . Yii::$app->user->identity->username . '',
                     'url' => ['/site/logout'],
@@ -69,7 +76,6 @@ AppAsset::register($this);
         <?= $content ?>
         </div>
     </div>
-
     <footer class="footer">
         <div class="container">
         <p>&copy; Designed, created and owned by Matthew Jones.<?= date('Y') ?>   <?= Html::a('Click here', ['site/termsandconditions'])?> for terms and conditions.</p>

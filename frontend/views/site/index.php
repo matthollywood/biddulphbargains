@@ -16,13 +16,19 @@ $this->title = 'Find local bargains at BiddulphBargains';
     <div class="body-content">
 	
 	<div>
-	<h1> </h1>
-
+	
         <div class="row">
 		
 
             <div class="span12">
-                <h2></h2>
+                <form action="categorieslanding" method="post">
+					<div class="form-group">
+			        <input type="text" name="keyword" placeholder="Search" class="form-control">
+					</div>
+					<div class="form-group">
+			            <?= Html::submitButton('Search', ['class' => 'btn btn-primary', 'name' => 'submit']) ?>
+			        </div>
+		        </form>
 
                 <p>Welcome to BiddulphBargains, your one stop shop for all the best deals and offers in Biddulph Town Centre. BiddulphBargains believe that getting a great deal 
 				is never a bad thing. However in small towns such as Biddulph, bargains and offers that are available are only spread through word of mouth and the occasional newsletter. Having all those
@@ -30,6 +36,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 				<p>There is no need to sign up to view these offers, simply use the search box above to find the type of deal or store you're looking for. Alternatively you can also use the category page
 				to find the different deals across each of the offer types. <br>
 				Don't forget to check out the events page for the latest news on what's going on in Biddulph</p>
+
 			</div>
            			
 

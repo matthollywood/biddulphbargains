@@ -8,23 +8,23 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-categorieslanding">
     <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Select the type of offer you're looking for to display all offers of that type in the area.</p>
-
-    <?= ListView::widget([
-		'dataProvider' => $provider,
-		'itemView' => function($model)
-	{return'<div class="row">
-	<div class="col-md-4">
-		<div class="list-group">
-			<a href="#" class="list-group-item active">
-			<h4 class="list-group-item-heading">' .$model->offer_description. '</h4>
-		<p class="list-group-item-text"></p>
-  </a>
-		</div>
-	</div>
-</div>';
-		},
-		'layout' => '{items}{pager}',
-    ]); ?>
+    <hr>
+	<?php
+	if(count($model) > 0){
+		foreach($model as $row){
+			?>
+			<h3><?= $row['offer_description']; ?></h3>
+			<p>Start Date :<span class="label label-success"><?php echo $row['offer_start_date']; ?></span></p>
+			<p>End Date :<span class="label label-danger"><?php echo $row['offer_end_date']; ?></span></p>
+			<hr>		
+			<?php
+		}
+	}else{
+		?>
+			<p>Ops! Seems like no offer exist with such keyterm.</p>
+			<p><?= Html::a('Try again', ['site/search'])?></p>
+		<?php
+	}
+	?>
+    
 </div>
