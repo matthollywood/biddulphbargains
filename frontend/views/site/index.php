@@ -22,9 +22,11 @@ $this->title = 'Find local bargains at BiddulphBargains';
 
             <div class="span12">
                 <form action="categorieslanding" method="post">
-					<div class="span6">
+					<div class="row">
+					<div class="col-md-6">
 					<div class="form-group">
 			        <input type="text" name="keyword" placeholder="Search" class="form-control">
+					</div>
 					</div>
 					</div>
 					<div class="form-group">
