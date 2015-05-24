@@ -30,7 +30,7 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'showScriptName' => true,
             'rules'=>array(
                 '<controller:\w+>/<action:\w+>/<id:[a-zA-Z0-9-]+>' => '<controller>/<action>',
             )
