@@ -37,6 +37,17 @@ return [
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
             )
         ],
+		'urlManageBackend' => [
+			'class' => 'yii\web\urlManager',
+			'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules'=>array(
+                '<controller:\w+>/<action:\w+>/<id:[a-zA-Z0-9-]+>' => '<controller>/<action>', '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+            )
+			'baseUrl' => 'http://profile.biddulphbargains.co.uk',
+		]
     ],
     
     'params' => $params,
