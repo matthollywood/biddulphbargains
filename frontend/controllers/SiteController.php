@@ -254,7 +254,7 @@ class SiteController extends Controller
 	
 	public function actionSignupstore()
 	{
-		$model = new TblOffers();
+		$model = new TblStores();
 		if ($model->load(Yii::$app->request->post())) {
         if ($model->validate()) {
 			$model->save();
