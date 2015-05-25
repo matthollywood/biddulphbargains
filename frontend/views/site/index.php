@@ -1,6 +1,8 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\helpers\BaseUrl;
+
 $this->title = 'Find local bargains at BiddulphBargains';
 ?>
 <div class="site-index">
@@ -21,7 +23,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 		
 
             <div class="span12">
-                <form action="categorieslanding" method="post">
+                <form action="<?php echo BaseUrl::base(true); ?>/site/categorieslanding" method="post">
 					<div class="form-group">
 			        <input type="text" name="keyword" placeholder="Search" class="form-control">
 					</div>

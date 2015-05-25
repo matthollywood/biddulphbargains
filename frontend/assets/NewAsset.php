@@ -18,10 +18,9 @@ class NewAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/navi.css',
-		'css/layout.css',
+
 		'css/site.css',
-		'css/tables.css',
+
     ];
     public $js = [
     ];
