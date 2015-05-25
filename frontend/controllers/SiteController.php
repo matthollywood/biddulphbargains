@@ -17,6 +17,7 @@ use frontend\models\Your;
 use frontend\models\YourSearch;
 use frontend\models\Catfind;
 use frontend\models\Catresults;
+use frontend\models\TblStores;
 
 /**
  * Site controller
@@ -250,4 +251,23 @@ class SiteController extends Controller
             ->all();
         return $this->render('categorieslanding',['model' => $rows,'web'=>$id]);
 	}
+	
+	public function actionSignupstore()
+	{
+		$model = new TblOffers();
+		if ($model->load(Yii::$app->request->post())) {
+        if ($model->validate()) {
+			$model->save();
+			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
+            return $this->redirect('index.php?r=site%2Fsearch');
+			
+        }
+    }
+
+    return $this->render('signupstore', [
+        'model' => $model,
+    ]);
+	}
+	
+	
 }

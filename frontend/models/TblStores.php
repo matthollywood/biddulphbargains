@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\models;
+namespace frontend\models;
 
 use Yii;
 
@@ -29,7 +29,7 @@ class TblStores extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['store_name', 'user_id'], 'required'],
+            [['store_name'], 'required'],
             [['user_id'], 'integer'],
             [['store_name'], 'string', 'max' => 50]
         ];
@@ -54,4 +54,10 @@ class TblStores extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
+	
+	public function beforeSave($insert = true) {
+    if ($insert) 
+		$this->user_id = Yii::$app->user->id;
+    return parent::beforeSave($insert);
+}
 }
