@@ -258,8 +258,8 @@ class SiteController extends Controller
 		if ($model->load(Yii::$app->request->post())) {
         if ($model->validate()) {
 			$model->save();
-			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
-            return $this->redirect('index.php?r=site%2Fsearch');
+			Yii::$app->session->setFlash('success', 'Your store has been added. To add an offer, please click Add Offer from the navigation bar');
+            return $this->redirect('site/index');
 			
         }
     }
