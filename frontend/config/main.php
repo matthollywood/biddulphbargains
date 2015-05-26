@@ -20,8 +20,12 @@ return [
 				'domain' => '.biddulphbargains.co.uk',
 				'path' => '/',
 			],
+		],
+		'session' => [
+			'autoStart'=>true,
+			'cookieParams' => array('domain' => '.biddulphbargains.co.uk'),
+			],
 			
-        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
