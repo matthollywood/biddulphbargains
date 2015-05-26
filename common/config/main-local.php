@@ -16,5 +16,21 @@ return [
             // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
-    ],
+		'session' => [
+			'savePath' => 'common\session',
+			'cookieParams' => [
+			'path' => '/',
+			'domain' => '.biddulphbargains.co.uk',
+			],
+		],
+		'user' => [
+			'identityClass' => 'common\models\User',
+			'enableAutoLogin' => true,
+			'identityCookie' => [
+				'name' => 'biddulphbargains',
+				'domain' => '.biddulphbargains.co.uk',
+				'path' => '/',
+				],
+			],
+		],
 ];
