@@ -49,11 +49,11 @@ AppAsset::register($this);
 				
             ];
             if (Yii::$app->user->isGuest) {
-                    $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                    $menuItems[] = ['label' => 'Login', 'url' => 'http://profile.biddulphbargains.co.uk'];
 					
             } else {
-				$menuItems[] = ['label' => 'Add your offer', 'url' => ['../../backend/web/offers/create']];
-				$menuItems[] = ['label' => 'View Your Offers', 'url' => ['../../backend/web/offers/index']];
+				$menuItems[] = ['label' => 'Add your offer', 'url' => ['http://profile.biddulphbargains.co.uk/your/create']];
+				$menuItems[] = ['label' => 'View Your Offers', 'url' => ['http://profile.biddulphbargains.co.uk/your/index']];
                 $menuItems[] = [
                     'label' => 'Logout ' . Yii::$app->user->identity->username . '',
                     'url' => ['/site/logout'],
