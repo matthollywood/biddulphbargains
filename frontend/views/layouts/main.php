@@ -52,7 +52,7 @@ AppAsset::register($this);
                     $menuItems[] = ['label' => 'Login', 'url' => 'http://profile.biddulphbargains.co.uk'];
 					
             } else {
-				$menuItems[] = ['label' => 'Add your offer', 'url' => ['http://profile.biddulphbargains.co.uk/your/create']];
+				$menuItems[] = ['label' => 'Add your offer', 'url' => 'http://profile.biddulphbargains.co.uk/your/create'];
 				$menuItems[] = ['label' => 'View Your Offers', 'url' => ['http://profile.biddulphbargains.co.uk/your/index']];
                 $menuItems[] = [
                     'label' => 'Logout ' . Yii::$app->user->identity->username . '',
