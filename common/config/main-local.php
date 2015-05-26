@@ -17,7 +17,7 @@ return [
             'useFileTransport' => true,
         ],
 		'session' => [
-			'savePath' => '\common\session',
+			
 			'cookieParams' => [
 			'path' => '/',
 			'domain' => '.biddulphbargains.co.uk',
