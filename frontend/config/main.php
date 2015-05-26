@@ -19,7 +19,8 @@ return [
 				'name' => '_biddulphbargains',
 				'domain' => '.biddulphbargains.co.uk',
 				'path' => '/',
-			]
+			],
+			
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
