@@ -2,12 +2,13 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\TblOffersSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Offers';
+$this->title = 'Your Offers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-offers-index">
@@ -18,19 +19,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Offers', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+	<?php Pjax::begin(); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
+			'offerType.offer_type',
             'offer_description',
             'offer_start_date',
-             'offer_end_date',
+            'offer_end_date',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+	<?php Pjax::end(); ?>
 
 </div>
