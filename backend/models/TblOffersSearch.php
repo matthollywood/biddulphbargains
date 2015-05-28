@@ -54,16 +54,19 @@ class TblOffersSearch extends TblOffers
             // $query->where('0=1');
             return $dataProvider;
         }
+		
+		$query->joinWith('offerType');
 
         $query->andFilterWhere([
             'offer_id' => $this->offer_id,
             'id' => $this->id,
-            'offer_type_id' => $this->offer_type_id,
+            
             'offer_start_date' => $this->offer_start_date,
             'offer_end_date' => $this->offer_end_date,
         ]);
 
         $query->andFilterWhere(['like', 'offer_description', $this->offer_description]);
+			  ->andFilterWhere(['like', 'offerType.offer_type' $this->offer_type_id]);
 
         return $dataProvider;
     }

@@ -33,8 +33,8 @@ class TblOffers extends \yii\db\ActiveRecord
     {
         return [
             [['id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
-            [['id', 'offer_type_id'], 'integer'],
-            [['offer_start_date', 'offer_end_date'], 'safe'],
+            [['id'], 'integer'],
+            [['offer_start_date', 'offer_end_date','offer_type_id'], 'safe'],
             [['offer_description'], 'string', 'max' => 8000]
         ];
     }
