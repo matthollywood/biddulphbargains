@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use backend\models\TblOfferTypes;
 use backend\models\TblStores;
+use backend\models\TblOfferTypes;
 use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
