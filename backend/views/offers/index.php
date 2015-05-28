@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\TblOffersSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tbl Offers';
+$this->title = 'Your Offers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-offers-index">
