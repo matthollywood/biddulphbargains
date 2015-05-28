@@ -55,7 +55,7 @@ class TblOffersSearch extends TblOffers
             return $dataProvider;
         }
 		
-		$query->joinWith('tbl_offer_types');
+		$query->joinWith('TblOfferTypes');
 
         $query->andFilterWhere([
             'offer_id' => $this->offer_id,
