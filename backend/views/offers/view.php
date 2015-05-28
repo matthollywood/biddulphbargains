@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [                      // the owner name of the model
                 'label' => 'Shop ID',
                 'value' => ArrayHelper::map(TblStores::find()->where(['user_id' => $userId])->all(),'store_id','store_name')
-               );
+               ),
             ],
             [                      // the owner name of the model
                 'label' => 'Offer Type',
