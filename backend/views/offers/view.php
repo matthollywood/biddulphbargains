@@ -5,13 +5,13 @@ use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblOffers */
-$this->title = $model->offer_id;
+$this->title = 'Your offer';
 $this->params['breadcrumbs'][] = ['label' => 'Offers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tbl-offers-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>Your offer details:</h1>
     <?php
     $userId = \Yii::$app->user->identity->status;
     if($userId === 30 ){
