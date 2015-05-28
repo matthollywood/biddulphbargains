@@ -18,8 +18,8 @@ class TblOffersSearch extends TblOffers
     public function rules()
     {
         return [
-            [['offer_id', 'id', 'offer_type_id'], 'integer'],
-            [['offer_description', 'offer_start_date', 'offer_end_date'], 'safe'],
+            [['offer_id', 'id'], 'integer'],
+            [['offer_description', 'offer_start_date', 'offer_end_date', 'offer_type_id'], 'safe'],
         ];
     }
 
