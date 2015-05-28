@@ -2,8 +2,6 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use backend\models\TblStores;
-use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblOffers */
@@ -34,10 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             [                      // the owner name of the model
                 'label' => 'Shop ID',
-                'value' => echo $form->field($model, 'id')
-               ->dropDownList(
-               ArrayHelper::map(TblStores::find()->all(),'store_id','store_name')
-               );   
+                'value' => 'storeName.store_name'
             ],
             [                      // the owner name of the model
                 'label' => 'Offer Type',
