@@ -34,7 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             [                      // the owner name of the model
                 'label' => 'Shop ID',
-                'value' => ArrayHelper::map(TblStores::find()->where(['user_id' => $userId])->all(),'store_id','store_name'),
+                'value' => echo $form->field($model, 'id')
+               ->dropDownList(
+               ArrayHelper::map(TblStores::find()->all(),'store_id','store_name')
+               );   
             ],
             [                      // the owner name of the model
                 'label' => 'Offer Type',
