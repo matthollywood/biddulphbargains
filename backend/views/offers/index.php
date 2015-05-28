@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'offer_id',
-            'offer_type_id.offer_type',
+            'offerType.offer_type',
             'offer_description',
             'offer_start_date',
             'offer_end_date',
