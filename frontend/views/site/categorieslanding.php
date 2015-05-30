@@ -13,12 +13,13 @@ $this->params['breadcrumbs'][] = $this->title;
 	if(count($model) > 0){
 		foreach($model as $row){
 			?>
+			<h2><?= $row['store_name']; ?></h2>
 			<h3><?= $row['offer_description']; ?></h3>
-			<h2><?= $row['id']; ?></h2>
 			<p>Start Date :<span class="label label-success"><?php echo $row['offer_start_date']; ?></span></p>
 			<p>End Date :<span class="label label-danger"><?php echo $row['offer_end_date']; ?></span></p>
 			<hr>		
 			<?php
+			
 		}
 	}else{
 		?>

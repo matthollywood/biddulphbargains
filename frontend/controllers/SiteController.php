@@ -241,8 +241,16 @@ class SiteController extends Controller
         $tid = $this->getTypeIDFromName($id);
         
         $rows = (new \yii\db\Query())
-            ->select(['id','offer_id','offer_description','offer_start_date','offer_end_date'])
+            ->select([
+			'tbl_offers.id',
+			'tbl_offers.offer_id',
+			'tbl_offers.offer_description',
+			'tbl_offers.offer_start_date',
+			'tbl_offers.offer_end_date',
+			'tbl_stores.store_name'])
             ->from('tbl_offers')
+			->join('LEFT OUTER JOIN','tbl_stores',
+					'tbl_offers.id =tbl_stores.store_id')
             ->where(['like','offer_description' , $id])
             ->orWhere(['offer_start_date'=>$id])
             ->orWhere(['offer_end_date'=>$id])
@@ -251,7 +259,6 @@ class SiteController extends Controller
             ->all();
         return $this->render('categorieslanding',['model' => $rows,'web'=>$id]);
 	}
-	
 	public function actionSignupstore()
 	{
 		$model = new TblStores();
