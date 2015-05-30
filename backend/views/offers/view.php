@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [                      // the owner name of the model
                 'label' => 'Offer Type',
-                'value' => $model->offerType->offer_type,
+                'value' => $model->id,
             ],
             'offer_description',
             'offer_start_date',
