@@ -19,7 +19,7 @@ use frontend\models\Catfind;
 use frontend\models\Catresults;
 use frontend\models\TblStores;
 use yii\data\pagination;
-use yii\data\LinkPager;
+use yii\widgets\LinkPager;
 /**
  * Site controller
  */
@@ -260,7 +260,7 @@ class SiteController extends Controller
         return $this->render('categorieslanding',[
 		'model' => $rows,
 		'web'=>$id,
-		'pagination'=>$pagination,]);
+		'pages'=>$pages,]);
 	}
 	public function actionSignupstore()
 	{

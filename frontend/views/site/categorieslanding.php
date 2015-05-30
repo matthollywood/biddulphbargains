@@ -2,7 +2,8 @@
 use yii\helpers\Html;
 use yii\widgets\ListView;
 use yii\data\ActiveDataProvider;
-use yii\data\LinkPager;
+use yii\data\pagination;
+use yii\widgets\LinkPager;
 /* @var $this yii\web\View */
 $this->title = 'Offer Results';
 $this->params['breadcrumbs'][] = $this->title;
