@@ -60,7 +60,6 @@ class TblOffersSearch extends TblOffers
         $query->andFilterWhere([
             'offer_id' => $this->offer_id,
             'id' => $this->id,
-            
             'offer_start_date' => $this->offer_start_date,
             'offer_end_date' => $this->offer_end_date,
         ]);
