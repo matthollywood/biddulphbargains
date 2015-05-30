@@ -18,7 +18,7 @@ use frontend\models\YourSearch;
 use frontend\models\Catfind;
 use frontend\models\Catresults;
 use frontend\models\TblStores;
-use yii\data\pagination;
+use yii\data\Pagination;
 use yii\widgets\LinkPager;
 /**
  * Site controller
