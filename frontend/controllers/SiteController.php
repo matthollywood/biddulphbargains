@@ -241,7 +241,7 @@ class SiteController extends Controller
         $tid = $this->getTypeIDFromName($id);
         
         $rows = (new \yii\db\Query())
-            ->select(['offer_id','offer_description','offer_start_date','offer_end_date'])
+            ->select(['id','offer_id','offer_description','offer_start_date','offer_end_date'])
             ->from('tbl_offers')
             ->where(['like','offer_description' , $id])
             ->orWhere(['offer_start_date'=>$id])
