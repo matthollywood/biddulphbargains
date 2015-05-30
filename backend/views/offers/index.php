@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'offer_start_date',
             'offer_end_date',
 			
-            [if($userRole === 30 ){'class' => 'yii\grid\ActionColumn'}],
+            ['class' => 'yii\grid\ActionColumn'],
 			
 
         ],
