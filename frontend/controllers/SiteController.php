@@ -257,10 +257,15 @@ class SiteController extends Controller
             ->orWhere(['offer_end_date'=>$id])
             ->orWhere(['offer_type_id'=>$tid])
             ->all();
+		
+		$pagination = new Pagination([
+			'defaultPageSize' => 5,
+		]);
+		
         return $this->render('categorieslanding',[
 		'model' => $rows,
 		'web'=>$id,
-		'pages'=>$pages,]);
+		'pagination'=>$pagination,]);
 	}
 	public function actionSignupstore()
 	{
