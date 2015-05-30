@@ -255,9 +255,11 @@ class SiteController extends Controller
             ->orWhere(['offer_start_date'=>$id])
             ->orWhere(['offer_end_date'=>$id])
             ->orWhere(['offer_type_id'=>$tid])
-            ->limit(10)
             ->all();
-        return $this->render('categorieslanding',['model' => $rows,'web'=>$id]);
+        return $this->render('categorieslanding',[
+		'model' => $rows,
+		'web'=>$id,
+		'pages'=>$pages,]);
 	}
 	public function actionSignupstore()
 	{

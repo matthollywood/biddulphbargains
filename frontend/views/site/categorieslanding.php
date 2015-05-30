@@ -21,6 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
 			<?php
 			
 		}
+		echo LinkPager::widget([
+		'pagination' => $pages,
+		]);
 	}else{
 		?>
 			<p>Oops! Seems like there's no offers like that at the moment. You could try again or check back soon!.</p>
