@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			
 		}
 		echo LinkPager::widget([
-		'pagination' => $pages,
+		'pagination' => $pagination,
 		]);
 	}else{
 		?>
