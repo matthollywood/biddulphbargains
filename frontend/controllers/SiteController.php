@@ -19,7 +19,7 @@ use frontend\models\Catfind;
 use frontend\models\Catresults;
 use frontend\models\TblStores;
 use yii\data\pagination;
-
+use yii\data\LinkPager;
 /**
  * Site controller
  */
