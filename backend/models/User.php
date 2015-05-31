@@ -188,4 +188,9 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+	
+	public function getOffers()
+	{
+		 return $this->hasMany(TblOffersSearch::className(), ['id' => 'id']);
+	}
 }
