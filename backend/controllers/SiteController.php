@@ -124,7 +124,7 @@ class SiteController extends Controller
 			return $this->render('admin');
 		}else
 		{
-			throw new ForbiddenHttpException;
+			throw new ForbiddenHttpException('Insufficient privileges to access this area.');
 		}
 		
 				
