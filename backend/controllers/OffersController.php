@@ -30,7 +30,7 @@ class OffersController extends Controller
      * Lists all TblOffers models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($id)
     {
         $searchModel = new TblOffersSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
