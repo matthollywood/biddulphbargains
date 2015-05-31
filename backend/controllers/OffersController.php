@@ -8,7 +8,7 @@ use backend\models\TblOffersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\controllers\User
+use backend\controllers\User;
 /**
  * OffersController implements the CRUD actions for TblOffers model.
  */
