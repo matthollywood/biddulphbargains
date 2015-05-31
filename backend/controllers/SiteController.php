@@ -9,6 +9,7 @@ use backend\models\SignupForm;
 use yii\filters\VerbFilter;
 use backend\models\TblOffers;
 use backend\models\TblStores;
+use yii\web\ForbiddenHttpException;
 
 
 /**
@@ -30,6 +31,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
+                        'actions' => ['logout', 'index','admin'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -117,7 +119,15 @@ class SiteController extends Controller
 	
 	public function actionAdmin()
 	{
-		return $this->render('admin');		
+		if( Yii::$app->user->can('access-admin') )
+		{
+			return $this->render('admin');
+		}else
+		{
+			throw new ForbiddenHttpException;
+		}
+		
+				
 	}
 	
 	/*public function actionAdd()
