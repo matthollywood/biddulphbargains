@@ -116,6 +116,11 @@ class SiteController extends Controller
         return $this->goHome();
     }
 	
+	public function actionAdmin()
+	{
+		return $this->render('admin');		
+	}
+	
 	/*public function actionAdd()
 	{
 		$model = new TblOffers();
