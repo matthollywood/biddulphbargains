@@ -73,6 +73,9 @@ class SiteController extends Controller
             if($model->user->status == 1 || $model->user->status == 0){
                 return $this->redirect('logout');
             }
+			elseif($model->user->status == 30){
+				return $this->redirect('admin');			
+			}
             return $this->goBack();
         } else {
             return $this->render('login', [
