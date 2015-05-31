@@ -8,7 +8,7 @@ use backend\models\TblOffersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use app\models\User;
+
 /**
  * OffersController implements the CRUD actions for TblOffers model.
  */
@@ -30,15 +30,14 @@ class OffersController extends Controller
      * Lists all TblOffers models.
      * @return mixed
      */
-    public function actionIndex($id)
+    public function actionIndex()
     {
         $searchModel = new TblOffersSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-		$user = User::findOne($id);
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-			'user' => $user,
         ]);
     }
 
