@@ -29,15 +29,10 @@ use yii\helpers\BaseUrl;
             <div class="col-lg-4">
                 <h2>Your Details</h2>
 
-                <p>Click the button below to reset your password</p>
+                <p>For all account enquiries, please email us at: support@biddulphbargains.co.uk</p>
 			
             </div>
-            <div class="col-lg-4">
-                <h2>Manage Store Owners</h2>
 
-                <p><?= Html::a('Manage Users &raquo;', ['/storeowners/index'], ['class' => 'btn btn-primary']) ?></p>
-                
-            </div>
         </div>
 
     </div>
