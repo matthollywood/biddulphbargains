@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		'attributes' => [
             [                      // the owner name of the model
                 'label' => 'Store Name',
-                'value' => $model->storeName->store_name,
+                'value' => $model->id,
             ],
             [                      // the owner name of the model
                 'label' => 'Offer Type',
