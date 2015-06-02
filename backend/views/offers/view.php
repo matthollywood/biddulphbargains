@@ -29,8 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php } ?>
     <?= DetailView::widget([
         'model' => $model,
-		'filterModel' => $searchModel,
-        'attributes' => [
+		'attributes' => [
             [                      // the owner name of the model
                 'label' => 'Store Name',
                 'value' => $model->id,
