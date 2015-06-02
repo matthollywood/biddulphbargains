@@ -31,6 +31,11 @@ class TblOffersSearch extends TblOffers
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
+	
+	public function getStoreName()
+	{
+		return $this->hasOne(TblStores::className(),['user_id' => 'id']);
+	}
 
     /**
      * Creates data provider instance with search query applied
