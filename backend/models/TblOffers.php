@@ -74,7 +74,7 @@ class TblOffers extends \yii\db\ActiveRecord
 	}
 	public function beforeSave($insert = true) {
     if ($insert) 
-		$this->id = Yii::$app->user->id;
+		$this->store_user_id = Yii::$app->user->id;
     return parent::beforeSave($insert);
 }
 }
