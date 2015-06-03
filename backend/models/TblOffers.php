@@ -32,7 +32,7 @@ class TblOffers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
+            [['store_user_id','id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
             [['store_user_id','id'], 'integer'],
             [['offer_start_date', 'offer_end_date','offer_type_id'], 'safe'],
             [['offer_description'], 'string', 'max' => 8000]
@@ -72,4 +72,9 @@ class TblOffers extends \yii\db\ActiveRecord
 	{
 		return $this->hasOne(TblStores::className(),['store_id'=>'store_user_id']);
 	}
+	public function beforeSave($insert = true) {
+    if ($insert) 
+		$this->id = Yii::$app->user->id;
+    return parent::beforeSave($insert);
+}
 }
