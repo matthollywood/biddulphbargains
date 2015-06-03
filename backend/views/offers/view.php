@@ -38,13 +38,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Offer Type',
                 'value' => $model->offerType->offer_type,
             ],
-            'offer_description',
-            'offer_start_date',
-            'offer_end_date',
 			[
 			'label' => 'user_id'
 			'value' => $model->Userid->store_user_id,
-			]
+			],
+            'offer_description',
+            'offer_start_date',
+            'offer_end_date',
+			
         ],
     ]) ?>
 
