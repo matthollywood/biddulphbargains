@@ -26,7 +26,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'BIDDULPH BARGAINS',
+                'brandLabel' => 'BiddulphBargains',
                 'brandUrl' => 'http://www.biddulphbargains.co.uk',
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
