@@ -74,4 +74,6 @@ class TblOffersSearch extends TblOffers
 
         return $dataProvider;
     }
+	
+	
 }

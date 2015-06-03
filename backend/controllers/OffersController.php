@@ -54,7 +54,7 @@ class OffersController extends Controller
                 'model' => $this->findModel($id),
             ]);
         }else{
-            return $this->redirect('../site/index');
+            return $this->redirect('/site/index');
         } 
     }
 
@@ -82,7 +82,7 @@ class OffersController extends Controller
                 ]);
             }
         }else{
-            return $this->redirect('../site/index');
+            return $this->redirect('/site/index');
         }
     }
 
@@ -108,7 +108,7 @@ class OffersController extends Controller
                 ]);
             }
         }else{
-            return $this->redirect('../site/index');
+            return $this->redirect('/site/index');
         }
     }
 
