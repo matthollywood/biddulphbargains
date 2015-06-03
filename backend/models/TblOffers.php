@@ -70,6 +70,6 @@ class TblOffers extends \yii\db\ActiveRecord
 	
 	public function getUserid()
 	{
-		return $this->hasOne(TblStores::className(),'store_id'=>'store_user_id');
+		return $this->hasOne(TblStores::className(),['store_id'=>'store_user_id']);
 	}
 }
