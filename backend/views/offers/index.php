@@ -33,6 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'offer_description',
             'offer_start_date',
             'offer_end_date',
+			'store_user_id',
 		
             ['class' => 'yii\grid\ActionColumn'],
 			
