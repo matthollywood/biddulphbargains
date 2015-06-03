@@ -30,7 +30,7 @@ class TblStores extends \yii\db\ActiveRecord
     {
         return [
             [['store_name', 'user_id'], 'required'],
-            [['user_id'], 'integer'],
+            [['user_id','store_id'], 'integer'],
             [['store_name'], 'string', 'max' => 50]
         ];
     }
