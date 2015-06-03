@@ -55,8 +55,6 @@ class TblOffersSearch extends TblOffers
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
             return $dataProvider;
         }
 		
@@ -67,6 +65,7 @@ class TblOffersSearch extends TblOffers
             'id' => $this->id,
             'offer_start_date' => $this->offer_start_date,
             'offer_end_date' => $this->offer_end_date,
+			'store_user_id' => $this->store_user_id,
         ]);
 
         $query->andFilterWhere(['like', 'offer_description', $this->offer_description])
