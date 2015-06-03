@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use backend\models\TblOffers;
+use backend\models\User;
 
 /**
  * TblOffersSearch represents the model behind the search form about `backend\models\TblOffers`.
@@ -65,7 +66,7 @@ class TblOffersSearch extends TblOffers
             'id' => $this->id,
             'offer_start_date' => $this->offer_start_date,
             'offer_end_date' => $this->offer_end_date,
-			'store_user_id' => $this->store_user_id,
+			'store_user_id' => $this->Yii::$app->user->id;
         ]);
 
         $query->andFilterWhere(['like', 'offer_description', $this->offer_description])
