@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
 			[
 			'label' => 'User ID',
-			'value' => $model->storeId->store_user_id,
+			'value' => $model->storeid->store_user_id,
 			],
             'offer_description',
             'offer_start_date',
