@@ -31,7 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'username',
             'email:email',
-            'status',
+		[
+		 'label' => 'Status',
+		 'value' => $model->statusName->status_category,
         ],
     ]) ?>
 

@@ -67,4 +67,9 @@ class StoreOwners extends \yii\db\ActiveRecord
     {
         return $this->hasMany(TblStores::className(), ['user_id' => 'id']);
     }
+	
+	public function getStatusName()
+	{
+		return $this->hasOne(TblStatus:;className(), ['status'=>'status'])	
+	}
 }
