@@ -60,7 +60,16 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        
+		
+		            if($model->user->status == 1 || $model->user->status == 0){
+                return $this->redirect('logout');
+            }
+			elseif($model->user->status === 30){
+				return $this->redirect('admin');			
+			}
+            return $this->render('index');
+		
     }
 
     public function actionLogin()
