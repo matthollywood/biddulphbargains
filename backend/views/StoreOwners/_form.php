@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use yii\models\TblStatus;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\StoreOwners */
@@ -16,7 +18,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <?= echo $form->field($model, 'status')
+               ->dropDownList(
+               ArrayHelper::map(TblStatus::find()->all(),'status','status')
+			   );
+			   ?>
+	
+
 
     <div style="display:none;">    
     <?= $form->field($model, 'auth_key')->textInput(['maxlength' => true,'style'=>'display:none;']) ?>
