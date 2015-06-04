@@ -60,16 +60,11 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        
-		
-		            if($model->user->status == 1 || $model->user->status == 0){
-                return $this->redirect('logout');
-            }
-			elseif($model->user->status === 30){
-				return $this->redirect('admin');			
-			}
-            return $this->render('index');
-		
+		if (Yii::$app->user->status === 30){
+			return $this->render(admin);
+		}else{
+        return $this->render('index');
+		}
     }
 
     public function actionLogin()
