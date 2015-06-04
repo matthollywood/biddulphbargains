@@ -18,7 +18,7 @@ use yii\models\TblStatus;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= echo $form->field($model, 'status')
+    <?= $form->field($model, 'status')
                ->dropDownList(
                ArrayHelper::map(TblStatus::find()->all(),'status','status')
 			   );
