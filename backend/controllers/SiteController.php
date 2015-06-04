@@ -60,11 +60,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-		if (Yii::$app->user->status === 30){
-			return $this->render(admin);
-		}else{
         return $this->render('index');
-		}
     }
 
     public function actionLogin()
