@@ -70,6 +70,6 @@ class StoreOwners extends \yii\db\ActiveRecord
 	
 	public function getStatusName()
 	{
-		return $this->hasOne(TblStatus:;className(), ['status'=>'status'])	
+		return $this->hasOne(TblStatus::className(), ['status'=>'status'])	
 	}
 }
