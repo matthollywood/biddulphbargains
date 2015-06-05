@@ -61,8 +61,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
+          &copy; Designed, created and owned by BiddulphBargains.<?= date('Y') ?>   <?= Html::a('Click here', ['http://www.biddulphbargains.co.uk/site/termsandconditions'])?> for terms and conditions.</p>
         </div>
     </footer>
 

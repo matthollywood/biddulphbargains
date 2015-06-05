@@ -27,7 +27,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-    <?php 
+    <?php
     $host = Url::base();
     ?>
     <?php $this->beginBody() ?>
@@ -45,23 +45,23 @@ AppAsset::register($this);
 				['label' => 'Events', 'url' => ['site/events']],
 				['label' => 'Search', 'url' => ['/site/search']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
-				
-				
+
+
             ];
             if (Yii::$app->user->isGuest) {
                     $menuItems[] = ['label' => 'Login', 'url' => 'http://profile.biddulphbargains.co.uk'];
-					
+
             } else {
 				$menuItems[] = ['label' => 'Add your offer', 'url' => 'http://profile.biddulphbargains.co.uk/offers/create'];
 				$menuItems[] = ['label' => 'View Your Offers', 'url' => 'http://profile.biddulphbargains.co.uk/offers/index'];
 				$menuItems[] = ['label' => 'Profile', 'url' => 'http://profile.biddulphbargains.co.uk/'];
-				
+
                 $menuItems[] = [
                     'label' => 'Logout ' . Yii::$app->user->identity->username . '',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ];
-				
+
             }
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
@@ -80,7 +80,7 @@ AppAsset::register($this);
     </div>
     <footer class="footer">
         <div class="container">
-        <p>&copy; Designed, created and owned by Matthew Jones.<?= date('Y') ?>   <?= Html::a('Click here', ['site/termsandconditions'])?> for terms and conditions.</p>
+        <p>&copy; Designed, created and owned by BiddulphBargains.<?= date('Y') ?>   <?= Html::a('Click here', ['site/termsandconditions'])?> for terms and conditions.</p>
         </div>
     </footer>
 
