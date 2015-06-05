@@ -18,9 +18,9 @@ return [
             'transport' => [
             'class' => 'Swift_SmtpTransport',
             'host' => 'smtp.1and1.com',
-            'username' => 'matthew.jones@biddulphbargains.co.uk',
-            'password' => 'royksopp1',
-          //  'auth' => 'without auth',
+            //'username' => 'matthew.jones@biddulphbargains.co.uk',
+            //'password' => 'royksopp1',
+            'auth' => 'without auth',
             'port' => '25',
                         ],
         ],
