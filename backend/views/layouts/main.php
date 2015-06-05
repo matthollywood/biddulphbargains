@@ -61,7 +61,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-          &copy; Designed, created and owned by BiddulphBargains.<?= date('Y') ?>   <?= Html::a('Click here', url=>'http://www.biddulphbargains.co.uk/site/termsandconditions')?> for terms and conditions.</p>
+          &copy; Designed, created and owned by BiddulphBargains.<?= date('Y') ?>   <?= Html::a('Click here', 'http://www.biddulphbargains.co.uk/site/termsandconditions')?> for terms and conditions.</p>
         </div>
     </footer>
 
