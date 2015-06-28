@@ -42,8 +42,8 @@ AppAsset::register($this);
             ]);
             $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
-				['label' => 'Events', 'url' => ['site/events']],
-				['label' => 'Search', 'url' => ['/site/search']],
+				        ['label' => 'Events', 'url' => ['site/events']],
+				        ['label' => 'Search', 'url' => ['/site/search']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
 
 
@@ -52,17 +52,17 @@ AppAsset::register($this);
                     $menuItems[] = ['label' => 'Login', 'url' => 'http://profile.biddulphbargains.co.uk'];
 
             } else {
-				$menuItems[] = ['label' => 'Add your offer', 'url' => 'http://profile.biddulphbargains.co.uk/offers/create'];
-				$menuItems[] = ['label' => 'View Your Offers', 'url' => 'http://profile.biddulphbargains.co.uk/offers/index'];
-				$menuItems[] = ['label' => 'Profile', 'url' => 'http://profile.biddulphbargains.co.uk/'];
-
-                $menuItems[] = [
+				    $menuItems[] = ['label' => 'Add your offer', 'url' => 'http://profile.biddulphbargains.co.uk/offers/create'];
+				    $menuItems[] = ['label' => 'View Your Offers', 'url' => 'http://profile.biddulphbargains.co.uk/offers/index'];
+				    $menuItems[] = ['label' => 'Profile', 'url' => 'http://profile.biddulphbargains.co.uk/'];
+            $menuItems[] = [
                     'label' => 'Logout ' . Yii::$app->user->identity->username . '',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ];
 
             }
+
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
