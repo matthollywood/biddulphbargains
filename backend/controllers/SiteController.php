@@ -75,7 +75,7 @@ class SiteController extends Controller
                 return $this->redirect('logout');
             }
 			elseif($model->user->status === 30){
-				return $this->redirect('admin');			
+				return $this->redirect('admin');
 			}
             return $this->goBack();
         } else {
@@ -98,7 +98,7 @@ class SiteController extends Controller
         return $this->render('signup', [
             'model' => $model,
         ]);
-        
+
     }
 
     private function insertShop($shopName,$id){
@@ -116,7 +116,7 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
-	
+
 	public function actionAdmin()
 	{
 		if( Yii::$app->user->can('access-admin') )
@@ -124,12 +124,12 @@ class SiteController extends Controller
 			return $this->render('admin');
 		}else
 		{
-			throw new ForbiddenHttpException('Insufficient privileges to access this area.');
+			return $this->render('index');
 		}
-		
-				
+
+
 	}
-	
+
 	/*public function actionAdd()
 	{
 		$model = new TblOffers();
@@ -139,7 +139,7 @@ class SiteController extends Controller
 			$model->save();
 			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
             return $this->redirect('index.php/site/add');
-			
+
         }
     }
 
