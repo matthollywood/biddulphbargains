@@ -37,7 +37,7 @@ AppAsset::register($this);
                 'brandLabel' => 'BiddulphBargains',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
+                    'class' => 'my-navbar navbar-fixed-top',
                 ],
             ]);
             $menuItems = [
