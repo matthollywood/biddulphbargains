@@ -29,9 +29,8 @@ $this->title = 'Find local bargains at BiddulphBargains';
 					</div>
 					<div class="form-group">
 			            <?= Html::submitButton('Search for offers', ['class' => 'btn btn-primary', 'name' => 'submit']) ?>
-
+                  this is a test
 			        </div>
-              this is a test
 		        </form>
           </div>
 
