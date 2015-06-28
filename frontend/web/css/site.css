@@ -23,8 +23,11 @@ body {
 }
 
 .jumbotron {
-    text-align: center;
+    text-align: top;
     background-color: transparent;
+    background-image: url(images/original-logos-2015-Jun-8625-5800746);
+    height:auto;
+    width: auto;
 }
 
 .jumbotron .btn {
@@ -92,6 +95,15 @@ a.desc:after {
 }
 
 .body-content{
-	
+
 text-align: center;
+}
+
+.span12{
+padding: 10px 20px;
+background-color: #ffecbb;
+border-radius: 25px;
+width: 50%;
+margin-left: auto;
+margin-right: auto;
 }
