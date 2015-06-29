@@ -25,7 +25,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
             <div class="span12">
                 <form action="<?php echo BaseUrl::base(true); ?>/site/categorieslanding" method="post">
 					<div class="form-group">
-			        <input type="text" name="keyword" placeholder="" class="form-control">
+			        <input type="text" name="keyword" placeholder="Start your search here" class="form-control">
 					</div>
 					<div class="form-group">
 			            <?= Html::submitButton('Search for offers', ['class' => 'btn btn-primary', 'name' => 'submit']) ?>
