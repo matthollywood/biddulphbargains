@@ -35,7 +35,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
           </div>
           <br>
         <div>
-          <p>
+          <p class="list-offers">
             <ul>
               <li> Where are the bargains in Biddulph?</li>
               <li> Local shops, local bargains.</li>
