@@ -77,7 +77,7 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
-	
+
 
     public function actionLogin()
     {
@@ -124,7 +124,7 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-	
+
 	public function actionSearch()
 	{
         if(isset($_POST['submit'])){
@@ -186,7 +186,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-	
+
 	public function actionAdd()
 	{
 		$model = new TblOffers();
@@ -196,14 +196,14 @@ class SiteController extends Controller
     			$model->save();
     			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
                 return $this->redirect('/index.php/site/add');
-    			
+
             }
         }
         return $this->render('add', [
             'model' => $model,
         ]);
 	}
-	
+
 		public function actionTermsandconditions()
 	{
 		return $this->render('termsandconditions');
@@ -211,18 +211,18 @@ class SiteController extends Controller
 
 	public function actionEvents()
 	{
-		return $this->render('events');		
+		return $this->render('events');
 	}
-	
+
 	public function actionCategories()
 	{
-		
+
 		$provider = new \yii\data\ActiveDataProvider([
 		'query' => Catfind::find(),
 		'pagination' => [
 			'pageSize' => 10,
 		],
-		
+
 		]);
 		return $this->render('categories',['provider' => $provider]);
 	}
@@ -232,7 +232,7 @@ class SiteController extends Controller
         $record = Catfind::findOne(['offer_type'=>$final]);
         return $record? $record->offer_id : 0;
     }
-	
+
 	public function actionCategorieslanding($id=0)
 	{
         $this->enableCsrfValidation = false;
@@ -240,7 +240,7 @@ class SiteController extends Controller
             $id = $_POST['keyword'];
         }
         $tid = $this->getTypeIDFromName($id);
-        
+
         $rows = (new \yii\db\Query())
             ->select([
 			'tbl_offers.id',
@@ -248,6 +248,7 @@ class SiteController extends Controller
 			'tbl_offers.offer_description',
 			'tbl_offers.offer_start_date',
 			'tbl_offers.offer_end_date',
+      'tbl_offers.offer_type_id'
 			'tbl_stores.store_name'])
             ->from('tbl_offers')
 			->join('LEFT OUTER JOIN','tbl_stores',
@@ -257,11 +258,11 @@ class SiteController extends Controller
             ->orWhere(['offer_end_date'=>$id])
             ->orWhere(['offer_type_id'=>$tid])
             ->all();
-		
+
 		$pagination = new Pagination([
 			'defaultPageSize' => 5,
 		]);
-		
+
         return $this->render('categorieslanding',[
 		'model' => $rows,
 		'web'=>$id,
@@ -275,7 +276,7 @@ class SiteController extends Controller
 			$model->save();
 			Yii::$app->session->setFlash('success', 'Your offer has been submitted. To add another offer, please fill the form in again');
             return $this->redirect('index.php?r=site%2Fsearch');
-			
+
         }
     }
 
@@ -283,6 +284,6 @@ class SiteController extends Controller
         'model' => $model,
     ]);
 	}
-	
-	
+
+
 }
