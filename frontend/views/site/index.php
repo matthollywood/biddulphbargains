@@ -35,6 +35,16 @@ $this->title = 'Find local bargains at BiddulphBargains';
           </div>
           <br>
         <div>
+          <p>
+            <ol>
+              <li> Where are the bargains in Biddulph?</li>
+              <li> Local shops, local bargains.</li>
+              <li> One site to find all bargains.</li>
+              <li> Vist here first!</li>
+              <li> Keep Biddulph in business.</li>
+              <li> Search now, find a bargain.</li>
+            </ol>
+          </p>
                 <p>Welcome to BiddulphBargains, your one stop shop for all the best deals and offers in Biddulph Town Centre. BiddulphBargains believe that getting a great deal
 				is never a bad thing. However in small towns such as Biddulph, bargains and offers that are available are only spread through word of mouth and the occasional newsletter. Having all those
 				offers available on one website will not only help you find the best deals, but also help strengthen the towns economy.</p>
