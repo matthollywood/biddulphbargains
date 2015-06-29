@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			?>
 			<h2><?= $row['store_name']; ?></h2>
 			<h3><?= $row['offer_description']; ?></h3>
-      <p>Offer type: <?= $row['offer_type_id']; ?></p>
+      <p>Offer type: <?= $row[$tid]; ?></p>
 			<p>Start Date :<span class="label label-success"><?php echo date("d-m-Y", strtotime($row['offer_start_date'])); ?></span></p>
 			<p>End Date	  :<span class="label label-danger"><?php echo date("d-m-Y", strtotime($row['offer_end_date'])); ?></span></p>
 			<hr>
