@@ -8,7 +8,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-events">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Remember to check here often to find out what's going on in and around Biddulph and the surrounding areas.</p>
+    <p>Remember to check here often to find out what's going on in and around Biddulph</p>
 
 
 </div>
