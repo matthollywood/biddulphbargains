@@ -50,7 +50,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 				offers available on one website will not only help you find the best deals, but also help strengthen the towns economy.</p>
 				<p>There is no need to sign up to view these offers, simply use the search box above to find the type of deal or store you're looking for. Alternatively you can also use the category page
 				to find the different deals across each of the offer types. <br>
-				Don't forget to check out the events page for the latest news on what's going on in Biddulph</p>
+				Don't forget to check out the events page for the latest news on what's going on in Biddulph This is a test</p>
       </div>
 
 
