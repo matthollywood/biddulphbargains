@@ -254,8 +254,8 @@ class SiteController extends Controller
         				'tbl_offers.id =tbl_stores.store_id')
                     ->where('active_status =1 AND (offer_description LIKE :likeid OR offer_start_date = :id OR
                     offer_end_date = :id OR offer_type_id = :tid OR offer_type_id = :tid OR store_name LIKE :likeid)
-                    AND offer_start_date < CURDATE()
-                    AND offer_end_date > CURDATE()',
+                    AND offer_start_date >= CURDATE()
+                    AND offer_end_date >= CURDATE()',
                     [':id' =>$id, ':likeid' => '%' . $id .'%',':tid'=>$tid])
                     ->all();
   /*      $rows = (new \yii\db\Query())
