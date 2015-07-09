@@ -240,8 +240,22 @@ class SiteController extends Controller
             $id = $_POST['keyword'];
         }
         $tid = $this->getTypeIDFromName($id);
-
         $rows = (new \yii\db\Query())
+                    ->select([
+        			'tbl_offers.id',
+        			'tbl_offers.offer_id',
+        			'tbl_offers.offer_description',
+        			'tbl_offers.offer_start_date',
+        			'tbl_offers.offer_end_date',
+              'tbl_offers.offer_type_id',
+        			'tbl_stores.store_name'])
+                    ->from('tbl_offers')
+        			->join('LEFT OUTER JOIN','tbl_stores',
+        				'tbl_offers.id =tbl_stores.store_id')
+                    ->where(['like','status =1 AND (offer_description LIKE :id OR offer_start_date = :id OR offer_end_date = :id OR offer_type_id = :id' ,  [':id' => $id]])
+
+                    ->all();
+  /*      $rows = (new \yii\db\Query())
             ->select([
 			'tbl_offers.id',
 			'tbl_offers.offer_id',
@@ -254,12 +268,12 @@ class SiteController extends Controller
 			         ->join('LEFT OUTER JOIN','tbl_stores',
 					          'tbl_offers.id =tbl_stores.store_id')
             ->where(['like','offer_description' , $id])
-            ->where('active_status = 1')
+            ->where(['active_status = 1')
             ->orWhere(['offer_start_date'=>$id])
             ->orWhere(['offer_end_date'=>$id])
             ->orWhere(['offer_type_id'=>$tid])
             ->all();
-
+*/
 		$pagination = new Pagination([
 			'defaultPageSize' => 5,
 		]);
