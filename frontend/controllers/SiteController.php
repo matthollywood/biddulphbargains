@@ -252,7 +252,7 @@ class SiteController extends Controller
                     ->from('tbl_offers')
                     ->join('LEFT OUTER JOIN','tbl_stores',
         				'tbl_offers.id =tbl_stores.store_id')
-                    ->where('active_status =1 AND (offer_description LIKE %:id% OR offer_start_date = :id OR offer_end_date = :id OR offer_type_id = :id)',  [':id' => $id])
+                    ->where('active_status =1 AND (offer_description LIKE :likeid OR offer_start_date = :id OR offer_end_date = :id OR offer_type_id = :id)',   [':id' =>$id, ':likeid' => '%' . $id .'%'])
                     ->all();
   /*      $rows = (new \yii\db\Query())
             ->select([
