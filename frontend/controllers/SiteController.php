@@ -254,7 +254,7 @@ class SiteController extends Controller
 			->join('LEFT OUTER JOIN','tbl_stores',
 					'tbl_offers.id =tbl_stores.store_id')
             ->where(['like','offer_description' , $id])
-            ->where(['active_status' = 1])
+            ->where(['active_status' , 1])
             ->orWhere(['offer_start_date'=>$id])
             ->orWhere(['offer_end_date'=>$id])
             ->orWhere(['offer_type_id'=>$tid])
