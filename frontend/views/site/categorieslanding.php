@@ -26,7 +26,15 @@ $this->params['breadcrumbs'][] = $this->title;
 	echo LinkPager::widget([
     'pagination' => $pagination,
 ]);
-	}else{
+	}
+
+
+
+
+
+
+
+else{
 		?>
 			<p>Oops! Seems like there's no offers like that at the moment. You could try again or check back soon!.</p>
 			<p><?= Html::a('Try again', ['site/search'])?></p>
