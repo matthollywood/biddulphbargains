@@ -258,33 +258,12 @@ class SiteController extends Controller
                     AND offer_end_date >= CURDATE()',
                     [':id' =>$id, ':likeid' => '%' . $id .'%',':tid'=>$tid])
                     ->all();
-  /*      $rows = (new \yii\db\Query())
-            ->select([
-			'tbl_offers.id',
-			'tbl_offers.offer_id',
-			'tbl_offers.offer_description',
-			'tbl_offers.offer_start_date',
-			'tbl_offers.offer_end_date',
-      'tbl_offers.offer_type_id',
-			'tbl_stores.store_name'])
-            ->from('tbl_offers')
-			         ->join('LEFT OUTER JOIN','tbl_stores',
-					          'tbl_offers.id =tbl_stores.store_id')
-            ->where(['like','offer_description' , $id])
-            ->where(['active_status = 1')
-            ->orWhere(['offer_start_date'=>$id])
-            ->orWhere(['offer_end_date'=>$id])
-            ->orWhere(['offer_type_id'=>$tid])
-            ->all();
-*/
-		$pagination = new Pagination([
-			'defaultPageSize' => 5,
-		]);
 
-        return $this->render('categorieslanding',[
+
+    return $this->render('categorieslanding',[
 		'model' => $rows,
 		'web'=>$id,
-		'pagination'=>$pagination,]);
+		'pages'=>$pages,]);
 	}
 	public function actionSignupstore()
 	{

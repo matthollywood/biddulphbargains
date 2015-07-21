@@ -23,9 +23,9 @@ $this->params['breadcrumbs'][] = $this->title;
 			<?php
 
 		}
-	echo LinkPager::widget([
-    'pagination' => $pagination,
-]);
+    echo LinkPager::widget([
+        'pagination' => $pages,
+    ]);
 	}
 
 
