@@ -16,7 +16,7 @@ use dosamigos\datepicker\DatePicker;
     <div class="row">
         <div class="col-sm-5">
              <?php $form = ActiveForm::begin();
-             if($userRole != 30){
+             if($userId != 30){
              ?>
              <?= $form->field($model, 'id')
                ->dropDownList(
