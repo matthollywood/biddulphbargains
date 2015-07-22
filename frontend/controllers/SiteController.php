@@ -262,8 +262,7 @@ class SiteController extends Controller
 
     return $this->render('categorieslanding',[
 		'model' => $rows,
-		'web'=>$id,
-		'pages'=>$pages,]);
+		'web'=>$id,]);
 	}
 	public function actionSignupstore()
 	{
