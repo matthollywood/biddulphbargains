@@ -33,7 +33,8 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'Home', 'url' => 'http://www.biddulphbargains.co.uk'],
+
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -42,6 +43,7 @@ AppAsset::register($this);
                     'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
+                      ['label' => 'Profile', 'url' => ['/site/index']],
                 ];
             }
             echo Nav::widget([
