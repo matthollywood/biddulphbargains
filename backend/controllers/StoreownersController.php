@@ -8,7 +8,7 @@ use backend\models\StoreOwnersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\models\TblOfferStatus
+use backend\models\TblOfferStatus;
 
 /**
  * StoreownersController implements the CRUD actions for StoreOwners model.

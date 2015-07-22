@@ -9,7 +9,7 @@ use backend\models\SignupForm;
 use yii\filters\VerbFilter;
 use backend\models\TblOffers;
 use backend\models\TblStores;
-use backend\models\TblOfferStatus
+use backend\models\TblOfferStatus;
 use yii\web\ForbiddenHttpException;
 
 
