@@ -12,10 +12,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="tbl-offers-view">
 
     <h1>Your offer details:</h1>
-    <?php
-    $userId = \Yii::$app->user->identity->status;
-    if($userId === 30 ){
-    ?>
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->offer_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->offer_id], [
@@ -26,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-    <?php } ?>
+
     <?= DetailView::widget([
         'model' => $model,
 		'attributes' => [
