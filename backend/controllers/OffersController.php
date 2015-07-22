@@ -8,6 +8,7 @@ use backend\models\TblOffersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\models\TblOfferStatus
 
 /**
  * OffersController implements the CRUD actions for TblOffers model.
@@ -55,7 +56,7 @@ class OffersController extends Controller
             ]);
         }else{
             return $this->redirect('/site/index');
-        } 
+        }
     }
 
     /**
@@ -67,9 +68,9 @@ class OffersController extends Controller
     {
         $userRole = \Yii::$app->user->identity->status;
         $userId = \Yii::$app->user->identity->id;
-           
+
         if($userRole === 30 || $userRole === 20){
-            
+
             $model =   new TblOffers();
 
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -145,5 +146,5 @@ class OffersController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-	
+
 }
