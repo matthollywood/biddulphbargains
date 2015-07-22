@@ -13,6 +13,7 @@ use Yii;
  * @property string $offer_description
  * @property string $offer_start_date
  * @property string $offer_end_date
+ * @property integer $active_status
  *
  * @property TblOfferTypes $offerType
  */
@@ -32,8 +33,8 @@ class TblOffers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date'], 'required'],
-            [['store_user_id','id'], 'integer'],
+            [['id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date','active_status'], 'required'],
+            [['store_user_id','id','active_status'], 'integer'],
             [['offer_start_date', 'offer_end_date','offer_type_id'], 'safe'],
             [['offer_description'], 'string', 'max' => 8000]
         ];
@@ -52,6 +53,7 @@ class TblOffers extends \yii\db\ActiveRecord
             'offer_start_date' => 'Offer Start Date',
             'offer_end_date' => 'Offer End Date',
 			'store_user_id' => 'User ID'
+            'active_status' => 'Active = 1'
         ];
     }
 
@@ -62,19 +64,19 @@ class TblOffers extends \yii\db\ActiveRecord
     {
         return $this->hasOne(TblOfferTypes::className(), ['offer_id' => 'offer_type_id']);
     }
-	
+
 	public function getStoreName()
 	{
 		return $this->hasOne(TblStores::className(),['store_name' => 'id']);
-	} 
-	
+	}
+
 	public function getStoreId()
 	{
 		return $this->hasOne(TblStores::className(),['store_id'=>'store_user_id']);
 	}
-	
+
 	public function beforeSave($insert = true) {
-    if ($insert) 
+    if ($insert)
 		$this->store_user_id = Yii::$app->user->id;
     return parent::beforeSave($insert);
 }

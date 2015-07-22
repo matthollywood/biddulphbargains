@@ -27,10 +27,10 @@ use dosamigos\datepicker\DatePicker;
                 echo $form->field($model, 'id')
                ->dropDownList(
                ArrayHelper::map(TblStores::find()->all(),'store_id','store_name')
-               );                
+               );
              }
              ?>
-             
+
              <?= $form->field($model, 'offer_type_id')
                ->dropDownList(
                ArrayHelper::map(TblOfferTypes::find()->all(),'offer_id','offer_type')
@@ -39,9 +39,9 @@ use dosamigos\datepicker\DatePicker;
 
              <?= $form->field($model, 'offer_description')->textInput(['maxlength' => 8000])->textArea(['rows' => 6]) ?>
 
-             
+
              <?= $form->field($model, 'offer_start_date')->widget(DatePicker::className(), [
-             'inline' => false, 
+             'inline' => false,
              // 'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
              'clientOptions' => [
                  'autoclose' => true,
@@ -50,22 +50,22 @@ use dosamigos\datepicker\DatePicker;
              ]);?>
 
              <?= $form->field($model, 'offer_end_date')->widget(DatePicker::className(), [
-             'inline' => false, 
+             'inline' => false,
             // 'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
              'clientOptions' => [
                  'autoclose' => true,
                  'format' => 'yyyy-mm-dd'
              ]
              ]);?>
+
+             <?= $form->field($model,'active_status')->textInput() ?>
              <div class="form-group">
                  <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
              </div>
 
              <?php ActiveForm::end(); ?>
-        
+
         </div>
     </div>
-    
+
 </div>
-
-
