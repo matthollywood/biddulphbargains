@@ -122,7 +122,7 @@ class OffersController extends Controller
     public function actionDelete($id)
     {
         $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 ){
+        if($userId === 30 || $userRole === 20){
             $this->findModel($id)->delete();
 
             return $this->redirect(['index']);
