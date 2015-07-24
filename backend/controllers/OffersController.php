@@ -98,7 +98,7 @@ class OffersController extends Controller
     public function actionUpdate($id)
     {
         $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 || $userRole === 20){
+        if($userId === 30 || $userId === 20){
             $model = $this->findModel($id);
 
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -122,7 +122,7 @@ class OffersController extends Controller
     public function actionDelete($id)
     {
         $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 || $userRole === 20){
+        if($userId === 30 || $userId === 20){
             $this->findModel($id)->delete();
 
             return $this->redirect(['index']);
