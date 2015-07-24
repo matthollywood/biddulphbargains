@@ -97,8 +97,10 @@ class OffersController extends Controller
      */
     public function actionUpdate($id)
     {
-        $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 || $userId === 20){
+        $userRole = \Yii::$app->user->identity->status;
+        $userId = \Yii::$app->user->identity->id;
+
+        if($userRole === 30 || $userRole === 20){
             $model = $this->findModel($id);
 
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
