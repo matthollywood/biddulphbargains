@@ -12,8 +12,6 @@ use backend\models\TblStores;
 use backend\models\TblOfferStatus;
 use yii\web\ForbiddenHttpException;
 
-use backend\models\TblOffersSearch;
-
 
 /**
  * Site controller
@@ -63,17 +61,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-      $userRole = \Yii::$app->user->identity->status;
-      $userId = \Yii::$app->user->identity->id;
-
-      if($userRole === 30 || $userRole === 20){
-          return $this->render('index', [
-              'model' => $this->findModel($id),
-              'userId' =>$userId,
-              'userRole'=>$userRole,
-          ]);  }else{
-                return $this->render('/site/index');
-              }
+        return $this->render('index');
     }
 
     public function actionLogin()
