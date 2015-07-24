@@ -65,13 +65,14 @@ class SiteController extends Controller
     {
       $userRole = \Yii::$app->user->identity->status;
       $userId = \Yii::$app->user->identity->id;
+
       if($userRole === 30 || $userRole === 20){
           return $this->render('index', [
               'model' => $this->findModel($id),
               'userId' =>$userId,
               'userRole'=>$userRole,
           ]);  }else{
-                return $this->render('/site/index')
+                return $this->render('/site/index');
               }
     }
 
