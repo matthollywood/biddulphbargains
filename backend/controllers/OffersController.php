@@ -150,7 +150,8 @@ class OffersController extends Controller
         if (($model = TblOffers::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException('The requested page does not exist. If you believe this to
+            be an error, please contact the support team.');
         }
     }
 

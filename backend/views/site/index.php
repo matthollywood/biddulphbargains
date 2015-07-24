@@ -4,11 +4,22 @@
 $this->title = 'Your profile';
 use yii\helpers\Html;
 use yii\helpers\BaseUrl;
+use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Welcome to your profile!</h1>
+        <h1>Welcome to your profile <?php $form = ActiveForm::begin();
+         if($userId != 30){
+         ?>
+         <?= $form->field($model, 'id')
+           ->dropDownList(
+           ArrayHelper::map(TblStores::find()->where(['user_id' => $userId])->all(),'store_id','store_name')
+           );
+           ?><?php ActiveForm::end(); ?>
+
+!</h1>
 
         <p class="lead">Use the options below to manage your accounts.</p>
 
@@ -30,7 +41,7 @@ use yii\helpers\BaseUrl;
                 <h2>Your Details</h2>
 
                 <p>For all account enquiries, please email us at: support@biddulphbargains.co.uk</p>
-			
+
             </div>
 
         </div>
