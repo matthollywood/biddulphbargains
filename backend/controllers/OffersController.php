@@ -106,6 +106,8 @@ class OffersController extends Controller
             } else {
                 return $this->render('update', [
                     'model' => $model,
+                    'userId' =>$userId,
+                    'userRole'=>$userRole,
                 ]);
             }
         }else{
