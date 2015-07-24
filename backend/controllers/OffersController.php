@@ -49,10 +49,13 @@ class OffersController extends Controller
      */
     public function actionView($id)
     {
-        $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 || $userId === 20){
+        $userRole = \Yii::$app->user->identity->status;
+        $userId = \Yii::$app->user->identity->id;
+        if($userRole === 30 || $userRole === 20){
             return $this->render('view', [
                 'model' => $this->findModel($id),
+                'userId' =>$userId,
+                'userRole'=>$userRole,
             ]);
         }else{
             return $this->redirect('/site/index');
@@ -125,8 +128,8 @@ class OffersController extends Controller
      */
     public function actionDelete($id)
     {
-        $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 || $userId === 20){
+        $userRole = \Yii::$app->user->identity->status;
+        if($userRole === 30 || $userRole === 20){
             $this->findModel($id)->delete();
 
             return $this->redirect(['index']);
