@@ -70,7 +70,7 @@ class SiteController extends Controller
               'model' => $this->findModel($id),
               'userId' =>$userId,
               'userRole'=>$userRole,
-            }else{
+          ]);  }else{
                 return $this->render('/site/index')
               }
     }
