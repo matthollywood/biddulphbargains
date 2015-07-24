@@ -4,7 +4,6 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 use backend\models\TblOfferTypes;
 use backend\models\TblStores;
-use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblOffers */
@@ -29,13 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
 		'attributes' => [
-            [                      // the owner name of the model
-                'label' => 'Store Name',
-                'value' => (
-                ArrayHelper::map(TblStores::find()->where(['user_id' => $userId])->all(),'store_id','store_name')
-              ),
-            ],
-            [                      // the owner name of the model
+
+            [                      // the offer name of the model
                 'label' => 'Offer Type',
                 'value' => $model->offerType->offer_type,
             ],
