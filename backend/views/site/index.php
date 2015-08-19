@@ -30,7 +30,7 @@ use yii\helpers\BaseUrl;
                 <h2>Your Details</h2>
 
                 <p>For all account enquiries, please email us at: support@biddulphbargains.co.uk</p>
-			
+
             </div>
 
         </div>

@@ -8,6 +8,7 @@ use backend\models\YourSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\models\TblOfferStatus;
 
 /**
  * YourController implements the CRUD actions for YourOffers model.

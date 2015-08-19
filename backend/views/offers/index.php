@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-			
+
             'offer_id',
 			[
 				'attribute'=>'offer_type_id',
@@ -33,11 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'offer_description',
             'offer_start_date',
             'offer_end_date',
-			
-		
+			      'active_status',
+
             ['class' => 'yii\grid\ActionColumn'],
-			
-			
+
+
         ],
     ]); ?>
 

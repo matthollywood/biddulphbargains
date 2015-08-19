@@ -8,6 +8,7 @@ use backend\models\TblOffersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\models\TblOfferStatus;
 
 /**
  * OffersController implements the CRUD actions for TblOffers model.
@@ -48,14 +49,17 @@ class OffersController extends Controller
      */
     public function actionView($id)
     {
-        $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 || $userId === 20){
+        $userRole = \Yii::$app->user->identity->status;
+        $userId = \Yii::$app->user->identity->id;
+        if($userRole === 30 || $userRole === 20){
             return $this->render('view', [
                 'model' => $this->findModel($id),
+                'userId' =>$userId,
+                'userRole'=>$userRole,
             ]);
         }else{
             return $this->redirect('/site/index');
-        } 
+        }
     }
 
     /**
@@ -67,9 +71,9 @@ class OffersController extends Controller
     {
         $userRole = \Yii::$app->user->identity->status;
         $userId = \Yii::$app->user->identity->id;
-           
+
         if($userRole === 30 || $userRole === 20){
-            
+
             $model =   new TblOffers();
 
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -96,8 +100,10 @@ class OffersController extends Controller
      */
     public function actionUpdate($id)
     {
-        $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 ){
+        $userRole = \Yii::$app->user->identity->status;
+        $userId = \Yii::$app->user->identity->id;
+
+        if($userRole === 30 || $userRole === 20){
             $model = $this->findModel($id);
 
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -105,6 +111,8 @@ class OffersController extends Controller
             } else {
                 return $this->render('update', [
                     'model' => $model,
+                    'userId' =>$userId,
+                    'userRole'=>$userRole,
                 ]);
             }
         }else{
@@ -120,8 +128,8 @@ class OffersController extends Controller
      */
     public function actionDelete($id)
     {
-        $userId = \Yii::$app->user->identity->status;
-        if($userId === 30 ){
+        $userRole = \Yii::$app->user->identity->status;
+        if($userRole === 30 || $userRole === 20){
             $this->findModel($id)->delete();
 
             return $this->redirect(['index']);
@@ -142,8 +150,9 @@ class OffersController extends Controller
         if (($model = TblOffers::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException('The requested page does not exist. If you believe this to
+            be an error, please contact the support team.');
         }
     }
-	
+
 }

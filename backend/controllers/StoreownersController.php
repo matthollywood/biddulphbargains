@@ -8,6 +8,7 @@ use backend\models\StoreOwnersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\models\TblOfferStatus;
 
 /**
  * StoreownersController implements the CRUD actions for StoreOwners model.
@@ -63,7 +64,7 @@ class StoreownersController extends Controller
         }
     }
 
-    
+
 
     /**
      * Updates an existing StoreOwners model.
@@ -74,7 +75,7 @@ class StoreownersController extends Controller
     public function actionUpdate($id)
     {
         $userRole = \Yii::$app->user->identity->status;
-        if($userRole === 30 ){   
+        if($userRole === 30 ){
             $model = $this->findModel($id);
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
