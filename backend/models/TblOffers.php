@@ -70,6 +70,11 @@ class TblOffers extends \yii\db\ActiveRecord
 		return $this->hasOne(TblStores::className(),['store_name' => 'id']);
 	}
 
+  public function getActiveStatus()
+  {
+    return $this->hasOne(TblOfferStatus::className(), ['offer_status_type' => 'active_status'])
+  }
+
 	public function getStoreId()
 	{
 		return $this->hasOne(TblStores::className(),['store_id'=>'store_user_id']);
