@@ -58,7 +58,12 @@ use dosamigos\datepicker\DatePicker;
              ]
              ]);?>
 
-             <?= $form->field($model,'active_status')->textInput() ?>
+             <?= $form->field($model,'active_status')->dropDownList(
+              ArrayHelper::map(TblOfferStatus::find()->all(),'offer_status_type','active_status')
+              ) ?>
+
+
+
              <div class="form-group">
                  <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
              </div>

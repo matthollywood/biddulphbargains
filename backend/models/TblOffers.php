@@ -52,7 +52,7 @@ class TblOffers extends \yii\db\ActiveRecord
             'offer_description' => 'Offer Description',
             'offer_start_date' => 'Offer Start Date',
             'offer_end_date' => 'Offer End Date',
-			'store_user_id' => 'User ID',
+			      'store_user_id' => 'User ID',
             'active_status' => 'Active = 1',
         ];
     }

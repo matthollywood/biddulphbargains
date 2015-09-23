@@ -45,4 +45,5 @@ class TblOfferStatus extends \yii\db\ActiveRecord
             'offer_status_type' => 'Status',
         ];
     }
+
 }
