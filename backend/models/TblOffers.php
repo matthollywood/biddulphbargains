@@ -33,7 +33,7 @@ class TblOffers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date','active_status','active_status'], 'required'],
+            [['id', 'offer_type_id', 'offer_description', 'offer_start_date', 'offer_end_date','active_status'], 'required'],
             [['store_user_id','id','active_status','active_status'], 'integer'],
             [['offer_start_date', 'offer_end_date','offer_type_id'], 'safe'],
             [['offer_description'], 'string', 'max' => 8000]
@@ -53,7 +53,7 @@ class TblOffers extends \yii\db\ActiveRecord
             'offer_start_date' => 'Offer Start Date',
             'offer_end_date' => 'Offer End Date',
 			      'store_user_id' => 'User ID',
-            'active_status' => 'Active = 1',
+            'active_status' => 'Active Status',
         ];
     }
 
@@ -70,10 +70,6 @@ class TblOffers extends \yii\db\ActiveRecord
 		return $this->hasOne(TblStores::className(),['store_name' => 'id']);
 	}
 
-  public function getActiveStatus()
-  {
-    return $this->hasOne(TblOfferStatus::className(), ['offer_status' => 'active_status']);
-  }
 
 	public function getStoreId()
 	{
