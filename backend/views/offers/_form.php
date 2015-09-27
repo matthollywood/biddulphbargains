@@ -63,8 +63,8 @@ use backend\models\TblOffers;
 
              <?= $form->field($model, 'active_status')
              ->dropDownList(
-             ArrayHelper::map(TblOfferStatus::find()->all(),'active_status','offer_status')
-           );
+             ArrayHelper::map(TblOfferStatus::find()->all(),'active_status','offer_status_type')
+           )
 
              ?>
 
