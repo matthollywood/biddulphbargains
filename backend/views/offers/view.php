@@ -33,8 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
             [                      // the offer name of the model
                 'label' => 'Offer Type',
                 'value' => $model->offerType->offer_type,
-                'label' =>   'active_status',
-                'value' => $model->offerStatus->active_status
+                'label' =>   'Active Status',
+                'value' => $model->offerStatus->active_status,
                        ],
 
             'offer_description',
