@@ -60,7 +60,7 @@ use dosamigos\datepicker\DatePicker;
              ]);?>
 
              <?= $form->field($model,'active_status')->dropDownList(
-              ArrayHelper::map(TblOfferStatus::find()->all(),'active_status','offer_status')
+              ArrayHelper::map(TblOffers::find()->all(),'active_status','offer_status')
               ) ?>
 
 
