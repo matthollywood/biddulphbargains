@@ -7,6 +7,7 @@ use backend\models\TblOfferTypes;
 use backend\models\TblOfferStatus;
 use backend\models\TblStores;
 use dosamigos\datepicker\DatePicker;
+use backend\models\TblOffers;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblOffers */
