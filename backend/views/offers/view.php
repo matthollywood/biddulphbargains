@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 use backend\models\TblOfferTypes;
 use backend\models\TblStores;
+use backend\models\TblOfferStatus;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\TblOffers */
@@ -32,12 +33,14 @@ $this->params['breadcrumbs'][] = $this->title;
             [                      // the offer name of the model
                 'label' => 'Offer Type',
                 'value' => $model->offerType->offer_type,
-            ],
+                'label' =>   'active_status',
+                'value' => $model->offerStatus->active_status
+                       ],
 
             'offer_description',
             'offer_start_date',
             'offer_end_date',
-            'active_status',
+
 
         ],
     ]) ?>

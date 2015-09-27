@@ -76,6 +76,12 @@ class TblOffers extends \yii\db\ActiveRecord
 		return $this->hasOne(TblStores::className(),['store_id'=>'store_user_id']);
 	}
 
+  public function getOfferStatus()
+  {
+    return $this->hasMany(TblOffers::className(), ['offer_status' => 'active_status']);
+  }
+
+
 	public function beforeSave($insert = true) {
     if ($insert)
 		$this->store_user_id = Yii::$app->user->id;
