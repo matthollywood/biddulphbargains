@@ -48,7 +48,7 @@ class TblOfferStatus extends \yii\db\ActiveRecord
 
     public function getOfferStatus()
     {
-      return $this->hasMany(TblOffers::className(), ['active_status' => 'offer_status']);
+      return $this->hasMany(TblOffers::className(), ['offer_status' => 'active_status']);
     }
 
 
