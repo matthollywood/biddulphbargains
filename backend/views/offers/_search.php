@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 /* @var $model backend\models\TblOffersSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
- 
+
 
 <div class="tbl-offers-search">
 
@@ -25,6 +25,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'offer_description') ?>
 
     <?= $form->field($model, 'offer_start_date') ?>
+
+    <?= $form->field($model, 'active_status') ?>
 
     <?php // echo $form->field($model, 'offer_end_date') ?>
 
