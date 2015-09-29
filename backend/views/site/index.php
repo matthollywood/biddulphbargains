@@ -8,7 +8,7 @@ use yii\helpers\BaseUrl;
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Welcome to your profile ('<?= . Yii::$app->user->identity->username . ?>')!</h1>
+        <h1>Welcome to your profile <?=  Yii::$app->user->identity->username  ?>!</h1>
 
         <p class="lead">Use the options below to manage your accounts.</p>
 
