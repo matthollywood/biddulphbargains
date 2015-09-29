@@ -36,7 +36,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
                        ],
             'offer_description',
-            'offer_start_date',
+          [
+ 'label' => 'Modified Date',
+ 'value' => date("d-m-Y",  strtotime($model->offer_start_date)),
+],
             'offer_end_date',
             [
               'label' => 'Active Status',
