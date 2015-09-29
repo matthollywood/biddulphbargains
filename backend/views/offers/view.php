@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
               'label' => 'Active Status',
               'value' => $model->offerStatus->active_status,
-              ]
+            ],
 
             'offer_description',
             'offer_start_date',
