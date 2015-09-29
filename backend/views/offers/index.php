@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'offer_end_date',
       [
 			      'attribute'=>'active_status',
-            'value'=> 'offerStatus'.'offer_status_type'
+            'value'=> 'offerStatus.offer_status_type'
       ],
             ['class' => 'yii\grid\ActionColumn'],
 
