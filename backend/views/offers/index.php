@@ -31,12 +31,15 @@ $this->params['breadcrumbs'][] = $this->title;
 				'value'=>'offerType.offer_type',
 			],
             'offer_description',
-            'offer_start_date',
+      [
+            'attribute' => 'offer_start_date',
+            'format' => ['date','php:d/m/Y']
+      ],
       [
             'attribute' => 'offer_end_date',
             'format' => ['date', 'php:d/m/Y']
       ],
-            'offer_end_date',
+    
       [
 			      'attribute'=>'active_status',
             'value'=> 'offerStatus.offer_status_type'
