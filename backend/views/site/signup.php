@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             <?php ActiveForm::end(); ?>
             <p> On submitting your application, you will be redirected to the login page. Your account will be activated within 24 hours by our Web Team.</p>
-            <p> If your account is not activated within 24 hours please visit our contact page by clicking <?= Html::a('here', 'https://www.biddulphbargains.co.uk')?> .</p>
+            <p> If your account is not activated within 24 hours please visit our contact page by clicking <?= Html::a('here', 'http://www.biddulphbargains.co.uk/site/contact')?> .</p>
         </div>
     </div>
 </div>
