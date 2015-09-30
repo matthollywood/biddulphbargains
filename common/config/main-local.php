@@ -17,10 +17,10 @@ return [
             'useFileTransport' => false,
             'transport' => [
             'class' => 'Swift_SmtpTransport',
-            'host' => 'imap.smtp.1and1.co.uk',
+            'host' => 'auth.smtp.1and1.co.uk',
             'username' => 'matthew.jones@biddulphbargains.co.uk',
             'password' => 'royksopp1',
-            'port' => '993',
+            'port' => '587',
                         ],
         ],
 		'session' => [
