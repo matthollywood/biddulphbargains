@@ -17,8 +17,8 @@ return [
             'useFileTransport' => false,
             'transport' => [
             'class' => 'Swift_SmtpTransport',
-            'host' => 'smtp.gmail.com',
-            'username' => 'matthewjones8152@gmail.com',
+            'host' => 'auth.smtp.1and1.couk',
+            'username' => 'matthew.jones@biddulphbargains.co.uk',
             'password' => 'royksopp1',
             'port' => '587',
                         ],
