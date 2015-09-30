@@ -91,8 +91,8 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 $this->insertShop(Yii::$app->request->post('storename'),$user->id);
-                return $this->goHome(Yii::$app->session->setFlash('success', 'Thank you for signing up. Your account is currently inactive and will be activated within 24 hours by our Web Team'));
-
+                return $this->redirect('http://www.biddulphbargains.co.uk');
+                Yii::$app->session->setFlash('success', 'Thank you for signing up. Your account is currently inactive and will be activated within 24 hours by our Web Team');
             }
         }
 
