@@ -20,7 +20,7 @@ return [
             'host' => 'auth.smtp.1and1.co.uk',
             'username' => 'matthew.jones@biddulphbargains.co.uk',
             'password' => 'royksopp1',
-            'port' => '587025',
+            'port' => '587',
                         ],
         ],
 		'session' => [
