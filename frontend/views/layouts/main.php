@@ -49,7 +49,7 @@ AppAsset::register($this);
 
             ];
             if (Yii::$app->user->isGuest) {
-                    $menuItems[] = ['label' => 'Login', 'url' => 'http://profile.biddulphbargains.co.uk'];
+                    $menuItems[] = ['label' => 'Login/Signup', 'url' => 'http://profile.biddulphbargains.co.uk'];
 
             } else {
 				    $menuItems[] = ['label' => 'Add your offer', 'url' => 'http://profile.biddulphbargains.co.uk/offers/create'];
