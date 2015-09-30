@@ -54,7 +54,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 				Don't forget to check out the events page for the latest news on what's going on in Biddulph</p>
       </div>
 
-				Don't forget to check out the events page for the latest news on what's going on in Biddulph This is a test</p>
+				Don't forget to check out the events page for the latest news on what's going on in Biddulph.</p>
       
 
 
