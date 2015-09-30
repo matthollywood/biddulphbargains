@@ -28,7 +28,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 			        <input type="text" name="keyword" placeholder="Start your search here" class="form-control">
 					</div>
 					<div class="form-group">
-			            <?= Html::submitButton('Search for offers', ['class' => 'btn btn-primary', 'name' => 'submit']) ?> <?= Html::a ('Browse Categories', ['site/categories'], 
+			            <?= Html::submitButton('Search for offers', ['class' => 'btn btn-primary', 'name' => 'submit']) ?> <?= Html::a ('Browse Categories', ['site/categories'],
 ['class'=>'btn btn-primary']) ?>
 			        </div>
 		        </form>
@@ -54,8 +54,8 @@ $this->title = 'Find local bargains at BiddulphBargains';
 				Don't forget to check out the events page for the latest news on what's going on in Biddulph</p>
       </div>
 
-				Don't forget to check out the events page for the latest news on what's going on in Biddulph.</p>
-      
+
+
 
 
 
