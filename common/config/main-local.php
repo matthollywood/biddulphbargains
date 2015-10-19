@@ -21,7 +21,7 @@ return [
             'username' => 'biddulphbargains@gmail.com',
             'password' => 'Royksopp1',
             'port' => '465',
-            'encryption' => 'tls',
+            'encryption' => 'ssl',
                         ],
         ],
 		'session' => [
