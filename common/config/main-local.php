@@ -20,7 +20,7 @@ return [
             'host' => 'smtp.gmail.com',
             'username' => 'biddulphbargains@gmail.com',
             'password' => 'Royksopp1',
-            'port' => '465',
+            'port' => '587',
             'encryption' => 'tls',
                         ],
         ],
