@@ -281,5 +281,8 @@ class SiteController extends Controller
     ]);
 	}
 
-
+  public function actionSignupstore()
+  {
+return $this->render('test');
+}
 }
