@@ -1,6 +1,6 @@
 <?php
 return [
-    'adminEmail' => 'matthew.jones@biddulphbargains.co.uk',
-    'supportEmail' => 'matthew.jones@biddulphbargains.co.uk',
+    'adminEmail' => 'biddulphbargains@gmail.com',
+    'supportEmail' => 'biddulphbargains@gmail.com',
     'user.passwordResetTokenExpire' => 3600,
 ];
