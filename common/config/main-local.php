@@ -21,7 +21,7 @@ return [
             'username' => 'matthew.jones@biddulphbargains.co.uk',
             'password' => 'Royksopp1',
             'port' => '587',
-            'encryption' => 'tsl',
+            'encryption' => 'tls',
                         ],
         ],
 		'session' => [
