@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		 'label' => 'Status',
 		 'value' => $model->statusName->status_category,
         ],
-                        ]
+      ],
                           ]
                          ) ?>
 
