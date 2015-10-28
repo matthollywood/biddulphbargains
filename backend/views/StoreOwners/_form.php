@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use yii\models\TblStatus;
+use backend\models\TblStatus;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\StoreOwners */
@@ -23,22 +23,22 @@ use yii\models\TblStatus;
                ArrayHelper::map(TblStatus::find()->all(),'status','status')
 			   );
 			   ?>
-	
 
 
-    <div style="display:none;">    
+
+    <div style="display:none;">
     <?= $form->field($model, 'auth_key')->textInput(['maxlength' => true,'style'=>'display:none;']) ?>
 
     <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true,'style'=>'display:none;']) ?>
 
     <?= $form->field($model, 'password_reset_token')->textInput(['maxlength' => true,'style'=>'display:none;']) ?>
 
-    
+
     <?= $form->field($model, 'created_at')->textInput(['style'=>'display:none;']) ?>
 
     <?= $form->field($model, 'updated_at')->textInput(['style'=>'display:none;']) ?>
     </div>
-    
+
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
