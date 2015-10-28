@@ -17,7 +17,7 @@ return [
             'useFileTransport' => false,
             'transport' => [
             'class' => 'Swift_SmtpTransport',
-            'host' => 'auth.smtp.1and1.co.uk',
+            'host' => 'http://mrelay.perfora.net/',
             'username' => 'matthew.jones@biddulphbargains.co.uk',
             'password' => 'Royksopp1',
             'port' => '587',
