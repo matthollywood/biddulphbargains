@@ -36,6 +36,6 @@ $this->params['breadcrumbs'][] = $this->title;
 		 'value' => $model->statusName->status_category,
         ],
       ],
-      ]) ?>
+      ] ) ?>
 
 </div>
