@@ -20,8 +20,8 @@ return [
             'host' => 'mrelay.perfora.net',
             'username' => 'matthew.jones@biddulphbargains.co.uk',
             'password' => 'Royksopp1',
-            'port' => '587',
-            'encryption' => 'tls',
+            'port' => '465',
+            'encryption' => 'SSL',
                         ],
         ],
 		'session' => [
