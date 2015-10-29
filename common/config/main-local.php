@@ -19,7 +19,7 @@ return [
             'class' => 'Swift_SmtpTransport',
             'host' => 'mrelay.perfora.net',
             'username' => 'matthew.jones@biddulphbargains.co.uk',
-            'password' => 'Royksopp1',
+            'password' => 'Roy1ksopp!',
             'port' => '465',
             'encryption' => 'ssl',
                         ],
