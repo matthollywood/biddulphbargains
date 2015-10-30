@@ -54,7 +54,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ADMIN, self::STATUS_DELETED,self::STATUS_INACTIVE,self::STATUS_ACTIVE]],
+            ['status', 'in', 'range' => [self::STATUS_ADMIN, self::STATUS_DELETED,self::STATUS_INACTIVE,self::STATUS_ACTIVE,self::STATUS_SHOPKEEPER]],
         ];
     }
 
@@ -99,7 +99,7 @@ class User extends ActiveRecord implements IdentityInterface
 
         return static::findOne([
             'password_reset_token' => $token,
-            'status' => self::STATUS_ACTIVE,
+            'status' => self::STATUS_SHOPKEEPER,
         ]);
     }
 
