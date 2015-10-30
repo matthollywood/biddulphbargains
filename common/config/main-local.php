@@ -20,7 +20,7 @@ return [
             'host' => 'mrvnet.kundenserver.de',
             'username' => 'matthew.jones@biddulphbargains.co.uk',
             'password' => 'Roy1ksopp!',
-            'port' => '587',
+            'port' => '25',
             //'encryption' => 'ssl',
                         ],
         ],
