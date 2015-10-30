@@ -28,7 +28,7 @@ use backend\models\TblOffers;
              }else{
                 echo $form->field($model, 'id')
                ->dropDownList(
-               ArrayHelper::map(TblStores::find()->all(),'store_id','store_name')
+               ArrayHelper::map(TblStores::find()->where(['user_id' => $userId])->all(),'store_id','store_name')
                );
              }
              ?>
