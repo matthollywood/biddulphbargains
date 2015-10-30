@@ -10,18 +10,18 @@ return [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            'viewPath' => '@common/mail',
+            //  'viewPath' => '@common/mail',
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             'useFileTransport' => false,
             'transport' => [
             'class' => 'Swift_SmtpTransport',
-            'host' => 'mrelay.perfora.net',
+            'host' => 'mrvnet.kundenserver.de',
             'username' => 'matthew.jones@biddulphbargains.co.uk',
-            'password' => 'Royksopp1',
-            'port' => '587',
-            'encryption' => 'tls',
+            'password' => 'Roy1ksopp!',
+            'port' => '25',
+            //'encryption' => 'ssl',
                         ],
         ],
 		'session' => [
