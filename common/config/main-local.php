@@ -20,8 +20,8 @@ return [
             'host' => 'auth.smtp.1and1.co.uk',
             'username' => 'matthew.jones@biddulphbargains.co.uk',
             'password' => 'Roy1ksopp!',
-            'port' => '465',
-            'encryption' => 'ssl',
+            'port' => '25',
+            //'encryption' => 'ssl',
                         ],
         ],
 		'session' => [
