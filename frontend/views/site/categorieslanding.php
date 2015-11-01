@@ -9,7 +9,7 @@ $this->title = 'Offer Results';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-categorieslanding">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= 'offer_type'?></h1>
     <hr>
 	<?php
 	if(count($model) > 0){
