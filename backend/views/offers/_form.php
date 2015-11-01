@@ -57,6 +57,7 @@ use backend\models\TblOffers;
              'clientOptions' => [
                  'autoclose' => true,
                  'format' => 'yyyy-mm-dd'
+                 'startDate' => date('1960-01-01'),
              ]
              ]);?>
 
