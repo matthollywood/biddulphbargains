@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1>Your offer details:</h1>
     <p>
         <?= Html::a('Update This Offer', ['update', 'id' => $model->offer_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Create another offer', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Another Offer', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Delete This Offer', ['delete', 'id' => $model->offer_id], [
             'class' => 'btn btn-danger',
             'data' => [
