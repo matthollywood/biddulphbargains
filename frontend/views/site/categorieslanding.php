@@ -5,11 +5,11 @@ use yii\data\ActiveDataProvider;
 use yii\data\pagination;
 use yii\widgets\LinkPager;
 /* @var $this yii\web\View */
-$this->title = 'Offer Results';
+$this->title = 'Search Results';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-categorieslanding">
-    <h1><?= 'offer_type'?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
     <hr>
 	<?php
 	if(count($model) > 0){
@@ -26,12 +26,6 @@ $this->params['breadcrumbs'][] = $this->title;
 		}
 
 	}
-
-
-
-
-
-
 
 else{
 		?>
