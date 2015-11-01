@@ -39,7 +39,7 @@ use backend\models\TblOffers;
                )
              ?>
 
-             <?= $form->field($model, 'offer_description')->textInput(['maxlength' => 8000])->textArea(['rows' => 6]) ?>
+             <?= $form->field($model, 'offer_description')->textInput(['maxlength' => 1000])->textArea(['rows' => 6]) ?>
 
 
              <?= $form->field($model, 'offer_start_date')->widget(DatePicker::className(), [
