@@ -248,7 +248,7 @@ class SiteController extends Controller
         			'tbl_offers.offer_start_date',
         			'tbl_offers.offer_end_date',
               'tbl_offers.offer_type_id',
-              'tbl_offer_types.offer_type'
+              'tbl_offer_types.offer_type',
         			'tbl_stores.store_name'])
                     ->from('tbl_offers')
                     ->join('LEFT OUTER JOIN','tbl_stores',
