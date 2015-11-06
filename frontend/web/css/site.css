@@ -26,9 +26,7 @@ body {
     text-align: top;
     background-color: transparent;
     background-image: url(images/original-logos-2015-Jun-8625-5800746);
-    height:auto;
-    width: auto;
-     background-size: cover;
+    background-size: cover;
 }
 
 .jumbotron .btn {
