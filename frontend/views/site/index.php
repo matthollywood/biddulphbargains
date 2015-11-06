@@ -8,7 +8,9 @@ $this->title = 'Find local bargains at BiddulphBargains';
 <div class="site-index">
 
     <div class="jumbotron">
+ <div class="container push-spaces">
 
+ </div>
     </div>
 
     <div class="body-content">
