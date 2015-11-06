@@ -225,7 +225,7 @@ class SiteController extends Controller
 
     'sort' => [
 	    'defaultOrder' => [
-	        'offer_id'=> SORT_DESC,
+	        'offer_id'=> SORT_ASC,
 	    ],
     ],
 
