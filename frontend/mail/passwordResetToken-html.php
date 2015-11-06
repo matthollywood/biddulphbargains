@@ -15,11 +15,10 @@ $resetLink = Yii::$app->urlManager->createAbsoluteUrl(['site/reset-password', 't
 </a>
     <p align="middle">Hello <?= Html::encode($user->username) ?>,</p>
     <br>
-    <p align="middle">It loosk like you've missed placed your password. Not to worry!</P>
+    <p align="middle">It looks like you've misplaced your password. Not to worry!</P>
         <br>
-    <p align="middle">It's really easy to reset your password,<p>
-        <br>
-    <p align="middle">Follow the link below to reset your password:</p>
+    <p align="middle">It's really easy to reset,<p>
+    <p align="middle">just follow the link below to reset your password:</p>
       <br>
     <p align="middle"><?= Html::a(Html::encode($resetLink), $resetLink) ?></p>
 
