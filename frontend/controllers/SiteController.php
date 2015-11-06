@@ -227,7 +227,7 @@ class SiteController extends Controller
 	    'defaultOrder' => [
 	        'offer_id'=> SORT_DESC,
 	    ],
-    ]
+    ],
 
 		]);
 		return $this->render('categories',['provider' => $provider]);
