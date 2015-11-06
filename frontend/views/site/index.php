@@ -8,16 +8,15 @@ $this->title = 'Find local bargains at BiddulphBargains';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Biddulph Bargains</h1>
-
-		<p> Find the best and most recent deals here at BiddulphBargains</p>
-
 
     </div>
 
     <div class="body-content">
 
 	<div>
+    <div>
+      Get A Great Deal More
+    </div>
 
         <div class="row">
 
