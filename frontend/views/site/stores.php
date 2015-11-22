@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	<div class="col-md-4">
 		<div class="list-group">
 			<a href="categorieslanding/'.str_replace(' ','-',$model->store_name).'" class="list-group-item active">
-				<h4 class="list-group-item-heading">' .$model->offer_type. '</h4>
+				<h4 class="list-group-item-heading">' .$model->store_name. '</h4>
 				<p class="list-group-item-text"></p>
   			</a>
 		</div>
