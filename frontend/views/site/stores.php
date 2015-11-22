@@ -9,7 +9,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-categories">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Select the type of offer you're looking for to display all offers of that type in the area.</p>
+    <p>Select the store you're looking for to display all offers of that type in the area.</p>
 
     <?= ListView::widget([
 		'dataProvider' => $provider,
