@@ -233,6 +233,30 @@ class SiteController extends Controller
 		return $this->render('categories',['provider' => $provider]);
 	}
 
+
+
+  public function actionStores()
+  {
+
+    $provider = new \yii\data\ActiveDataProvider([
+    'query' => TblStores::find(),
+    'pagination' => [
+      'pageSize' => 10,
+    ],
+
+    'sort' => [
+      'defaultOrder' => [
+          'offer_id'=> SORT_ASC,
+      ],
+    ],
+
+    ]);
+    return $this->render('stores',['provider' => $provider]);
+  }
+
+
+
+
     private function getTypeIDFromName($id){
         $final = str_replace('-',' ',$id);
         $record = Catfind::findOne(['offer_type'=>$final]);
