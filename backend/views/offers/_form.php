@@ -56,7 +56,8 @@ use backend\models\TblOffers;
             // 'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
              'clientOptions' => [
                  'autoclose' => true,
-                 'format' => 'yyyy-mm-dd'
+                 'format' => 'yyyy-mm-dd',
+                 'startDate' => date('1960-01-01'),
              ]
              ]);?>
 

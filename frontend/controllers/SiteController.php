@@ -223,6 +223,12 @@ class SiteController extends Controller
 			'pageSize' => 10,
 		],
 
+    'sort' => [
+	    'defaultOrder' => [
+	        'offer_id'=> SORT_ASC,
+	    ],
+    ],
+
 		]);
 		return $this->render('categories',['provider' => $provider]);
 	}
@@ -258,7 +264,7 @@ class SiteController extends Controller
                     ->where('active_status =1 AND (offer_description LIKE :likeid OR offer_start_date = :id OR
                     offer_end_date = :id OR offer_type_id = :tid OR offer_type_id = :tid OR store_name LIKE :likeid)
                     AND offer_start_date >= CURDATE()
-                    AND offer_end_date >= CURDATE()',
+                    AND offer_end_date <= CURDATE()',
                     [':id' =>$id, ':likeid' => '%' . $id .'%',':tid'=>$tid])
                     ->all();
 

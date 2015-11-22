@@ -8,16 +8,15 @@ $this->title = 'Find local bargains at BiddulphBargains';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Biddulph Bargains</h1>
+ <div class="container push-spaces">
 
-		<p> Find the best and most recent deals here at BiddulphBargains</p>
-
-
+ </div>
     </div>
 
     <div class="body-content">
 
 	<div>
+
 
         <div class="row">
 
@@ -35,6 +34,12 @@ $this->title = 'Find local bargains at BiddulphBargains';
           </div>
           <br>
         <div>
+
+          <div>
+            <br>
+            Get A Great Deal More
+            <br>
+          </div>
           <p class="list-offers">
             <ul>
               <li> Where are the bargains in Biddulph?</li>
