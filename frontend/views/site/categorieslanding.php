@@ -31,9 +31,8 @@ else{
 		?>
 			<p>Oops! Seems like there's no offers like that at the moment. You could try again or check back soon!.</p>
 			<p><?= Html::a('Try again', ['site/search'])?></p>
-      <p> <a href="javascript:history.go(-1)">Or go back</a></p>
 		<?php
 	}
 	?>
-
+<p> <a href="javascript:history.go(-1)">Go back</a></p>
 </div>
