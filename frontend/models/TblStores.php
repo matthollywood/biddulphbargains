@@ -1,7 +1,7 @@
 <?php
 
 namespace frontend\models;
-
+use yii\db\ActiveRecord;
 use Yii;
 
 /**
@@ -54,9 +54,9 @@ class TblStores extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
-	
+
 	public function beforeSave($insert = true) {
-    if ($insert) 
+    if ($insert)
 		$this->user_id = Yii::$app->user->id;
     return parent::beforeSave($insert);
 }
