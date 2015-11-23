@@ -25,9 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
 	        </form>
 		</div>
 		<div class="col-sm-12">
-			Alternatively you can <?= Html::a('click here', ['site/categories'])?> to see the list of offer types</p>
+			Alternatively you can <?= Html::a('click here', ['site/categories'])?> to see the list of offer types
+			<br>
+			Or browse by store by <?=Html::a('clicking here' ['site/stores'])?></p>
 		</div>
-		
+
 	</div>
-	
+
 </div>
