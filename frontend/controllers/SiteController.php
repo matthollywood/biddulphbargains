@@ -297,6 +297,8 @@ class SiteController extends Controller
 		'model' => $rows,
 		'web'=>$id,]);
 	}
+
+  
 	public function actionSignupstore()
 	{
 		$model = new TblStores();
@@ -313,9 +315,3 @@ class SiteController extends Controller
         'model' => $model,
     ]);
 	}
-
-  public function actionTest()
-  {
-return $this->render('test');
-}
-}
