@@ -42,7 +42,12 @@ return [
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
             )
         ],
-
+    'view' => [
+        'theme' => [
+            'pathMap' => ['@app/views' => '@app/themes/night-lights'],
+            'baseUrl' => '@web/themes/night-lights',
+        ],
+    ],
     ],
     
     'params' => $params,
