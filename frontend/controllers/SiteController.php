@@ -243,16 +243,15 @@ class SiteController extends Controller
     'pagination' => [
       'pageSize' => 10,
     ],
-    $ros = (new \yii\db\Query())
+    $rows = (new \yii\db\Query())
                 ->select([
                   'tbl_stores.store_name'])
-                    ->from('tbl_stores'),
+                    ->from(['tbl_stores']),
                     ->join('INNER JOIN','tbl_offers'
                     'tbl_stores.store_id = tbl_offers.id')
                     ->where('active_status =1
                     AND offer_start_date <= CURDATE()
-                    AND offer_end_date >= CURDATE()',
-                )
+                    AND offer_end_date >= CURDATE()')
     'sort' => [
       'defaultOrder' => [
           'offer_id'=> SORT_ASC,
