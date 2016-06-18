@@ -245,7 +245,7 @@ class SiteController extends Controller
     ],
     $ros = (new \yii\db\Query())
                 ->select([
-                  'tbl_stores.store_name',
+                  'tbl_stores.store_name'])
                     ->from('tbl_stores'),
                     ->join('INNER JOIN','tbl_offers'
                     'tbl_stores.store_id = tbl_offers.id')
