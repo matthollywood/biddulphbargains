@@ -252,15 +252,10 @@ class SiteController extends Controller
                     AND offer_start_date <= CURDATE()
                     AND offer_end_date >= CURDATE()')]
 
-    'sort' => [
-      'defaultOrder' => [
-          'offer_id'=> SORT_ASC,
-      ],
-    ],
-
-    ]);
     return $this->render('stores',
     ['model' => $rows]);
+    ]);
+
   }
 
 
