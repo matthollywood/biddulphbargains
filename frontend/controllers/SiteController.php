@@ -247,7 +247,7 @@ class SiteController extends Controller
                 ->select([
                   'tbl_stores.store_name',
                     ->from('tbl_stores')
-                    ->join('LEFT OUTTER JOIN','tbl_offers'
+                    ->join('INNER JOIN','tbl_offers'
                     'tbl_stores.store_id = tbl_offers.id')
                     ->where('active_status =1
                     AND offer_start_date <= CURDATE()
