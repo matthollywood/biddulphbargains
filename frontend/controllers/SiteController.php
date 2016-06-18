@@ -250,7 +250,7 @@ class SiteController extends Controller
                     'tbl_stores.store_id = tbl_offers.id')
                     ->where('active_status =1
                     AND offer_start_date <= CURDATE()
-                    AND offer_end_date >= CURDATE()');
+                    AND offer_end_date >= CURDATE()')]
 
     'sort' => [
       'defaultOrder' => [
@@ -259,7 +259,8 @@ class SiteController extends Controller
     ],
 
     ]);
-    return $this->render('stores',['model' => $rows]);
+    return $this->render('stores',
+    ['model' => $rows]);
   }
 
 
