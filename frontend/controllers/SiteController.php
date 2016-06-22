@@ -255,7 +255,7 @@ class SiteController extends Controller
                 ->and('offer_start_date <= CURDATE()')
                 ->and('offer_end_date >= CURDATE()')
 
-                ->all();
+                $rows = $query->all();
 
 
 
