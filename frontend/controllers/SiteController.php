@@ -242,7 +242,7 @@ class SiteController extends Controller
     'pagination' => [
       'pageSize' => 10,
     ],
-
+],
 
     $query = (new \yii\db\Query())
 
@@ -254,13 +254,14 @@ class SiteController extends Controller
                 ->where('active_status =1')
                 ->and('offer_start_date <= CURDATE()')
                 ->and('offer_end_date >= CURDATE()')
+
                 ->all();
 
 
 
     return $this->render('stores',
     ['model' => $query]);
-    ]);
+  );
 
   }
 
