@@ -237,12 +237,6 @@ class SiteController extends Controller
 
   public function actionStores()
   {
-    $provider = new \yii\data\ActiveDataProvider([
-    'query' => TblStores::find(),
-    'pagination' => [
-      'pageSize' => 10,
-    ],
-],
 
     $query = (new \yii\db\Query())
 
@@ -259,7 +253,6 @@ class SiteController extends Controller
 
     return $this->render('stores',
     ['model' => $query]);
-  );
 
   }
 
