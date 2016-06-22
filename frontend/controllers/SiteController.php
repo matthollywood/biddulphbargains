@@ -237,12 +237,6 @@ class SiteController extends Controller
 
   public function actionStores()
   {
-
-    $provider = new \yii\data\ActiveDataProvider([
-    'query' => TblStores::find(),
-    'pagination' => [
-      'pageSize' => 10,
-    ],
     $query = (new \yii\db\Query())
 
                 ->select([
@@ -255,6 +249,13 @@ class SiteController extends Controller
                 ->and('offer_end_date >= CURDATE()')
 
                 $rows = $query->all();
+
+                $provider = new \yii\data\ActiveDataProvider([
+                'query' => TblStores::find(),
+                'pagination' => [
+                  'pageSize' => 10,
+                ],
+
     return $this->render('stores',
     ['model' => $rows]);
     ]);
