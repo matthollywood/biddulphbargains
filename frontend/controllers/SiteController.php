@@ -253,7 +253,7 @@ class SiteController extends Controller
                     'tbl_stores.store_id = tbl_offers.id')
                 ->where('active_status =1')
                 ->and('offer_start_date <= CURDATE()')
-                ->and('offer_end_date >= CURDATE()')
+                ->and('offer_end_date >= CURDATE()');
 
                 $rows = $query->all();
 
