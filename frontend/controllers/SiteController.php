@@ -251,7 +251,7 @@ class SiteController extends Controller
                     ->where('active_status =1
                     AND offer_start_date <= CURDATE()
                     AND offer_end_date >= CURDATE()')]
-                    $row = $query->all();
+                    $rows = $query->all();
     return $this->render('stores',
     ['model' => $rows]);
     ]);
