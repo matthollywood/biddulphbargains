@@ -251,7 +251,7 @@ class SiteController extends Controller
                 ->from('tbl_stores')
                 ->join('INNER JOIN','tbl_offers',
                     'tbl_stores.store_id = tbl_offers.id')
-                ->where('active_status =1 AND offer_start_date <= CURDATE() AND offer_end_date >= CURDATE()');
+                ->where('active_status =1 AND offer_start_date <= CURDATE() AND offer_end_date >= CURDATE()')
 
                 $rows = $query->all();
 
