@@ -30,7 +30,7 @@ $this->title = 'Find local bargains at BiddulphBargains';
 			            <?= Html::submitButton('Search for offers', ['class' => 'btn btn-primary', 'name' => 'submit']) ?> <?= Html::a ('Browse Categories', ['site/categories'],
 ['class'=>'btn btn-primary']) ?> <br>
 <br>
-              <?=/* Html::a ('Browse Stores', ['site/stores'],['class'=>'btn btn-primary']) */?>
+      
 			        </div>
 		        </form>
           </div>
