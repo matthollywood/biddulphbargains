@@ -235,7 +235,7 @@ class SiteController extends Controller
 
 
 
-  public function actionStores()
+/*  public function actionStores()
   {
 
     $query = (new \yii\db\Query())
@@ -255,7 +255,7 @@ class SiteController extends Controller
     ['model' => $query]);
 
   }
-
+*/
 
 
 
