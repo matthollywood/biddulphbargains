@@ -20,6 +20,7 @@ use frontend\models\Catresults;
 use frontend\models\TblStores;
 use yii\data\Pagination;
 use yii\widgets\LinkPager;
+use yii\db\Query;
 /**
  * Site controller
  */
