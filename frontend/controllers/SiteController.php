@@ -252,8 +252,8 @@ $query->select(['tbl_stores.store_name'])
                     'tbl_stores.store_id = tbl_offers.id')
                     ->where('active_status =1
                     AND offer_start_date <= CURDATE()
-                    AND offer_end_date >= CURDATE()'),
-                    'AND offer_end_date >= CURDATE()')
+                    AND offer_end_date >= CURDATE()
+                    AND offer_end_date >= CURDATE()')
                     ->all();
 $rows = $query->all();
 
