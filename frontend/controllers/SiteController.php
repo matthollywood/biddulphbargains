@@ -247,8 +247,14 @@ public function actionStores()
 
 $query = new Query;
 $query->select(['tbl_stores.store_name'])
-      ->from('tbl_stores')
-      ->all();
+                    ->from('tbl_stores')
+                    ->join('INNER JOIN','tbl_offers',
+                    'tbl_stores.store_id = tbl_offers.id')
+                    ->where('active_status =1
+                    AND offer_start_date <= CURDATE()
+                    AND offer_end_date >= CURDATE()'),
+                    'AND offer_end_date >= CURDATE()')
+                    ->all();
 $rows = $query->all();
 
 return $this->render('stores', ['model' => $rows, 'provider' => $provider]);
