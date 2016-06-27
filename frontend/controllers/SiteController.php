@@ -237,10 +237,12 @@ class SiteController extends Controller
 
 public function actionStores()
 {
-$rows = (new  \yii\db\Query())
-->select(['tbl_stores.store_name'])
-->from('tbl_stores')
-->all();
+
+$query = new Query;
+$query->select(['tbl_stores.store_name'])
+      ->from('tbl_stores')
+      ->all();
+$rows = $query->all();
 
 return $this->render('stores', ['model' => $rows]);
 }
