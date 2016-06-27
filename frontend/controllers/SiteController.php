@@ -251,7 +251,7 @@ $query->select(['tbl_stores.store_name'])
       ->all();
 $rows = $query->all();
 
-return $this->render('stores', ['model' => $rows]);
+return $this->render('stores', ['model' => $rows, 'provider' => $provider]);
 }
 
 
