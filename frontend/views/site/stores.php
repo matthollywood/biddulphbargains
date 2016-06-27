@@ -3,10 +3,10 @@ use yii\helpers\Html;
 use yii\widgets\ListView;
 use yii\data\ActiveDataProvider;
 /* @var $this yii\web\View */
-$this->title = 'Categories';
+$this->title = 'Stores';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-categories">
+<div class="site-stores">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Select the store you're looking for to display all offers of that type in the area.</p>

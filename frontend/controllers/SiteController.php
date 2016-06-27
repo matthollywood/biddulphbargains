@@ -248,7 +248,7 @@ public function actionStores()
 $query = new Query;
 $query->select(['tbl_stores.store_name'])
                     ->from('tbl_stores')
-                    ->join('INNER JOIN','tbl_offers',
+                    ->join('LEFT JOIN','tbl_offers',
                     'tbl_stores.store_id = tbl_offers.id')
                     ->where('active_status =1
                     AND offer_start_date <= CURDATE()
