@@ -235,7 +235,7 @@ class SiteController extends Controller
 
 
 
-public function getStores()
+public function actionStores()
 {
 $rows = (new  \yii\db\Query())
 ->select(['tbl_stores.store_name'])
