@@ -256,8 +256,12 @@ $query->select(['tbl_stores.store_name'])
                     AND offer_end_date >= CURDATE()')
                     ->all();
 $rows = $query->all();
-
+if($model->rows !== null){
 return $this->render('stores', ['model' => $rows, 'provider' => $provider]);
+}
+else {
+return $this->render('index');
+}
 }
 
 
