@@ -240,7 +240,7 @@ public function actionStores()
 {
 
   $provider = new \yii\data\ActiveDataProvider([
-  'query' => Catfind::find(),
+  'query' => TblStores::find(),
   'pagination' => [
     'pageSize' => 10,
   ]]);
