@@ -10,8 +10,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Select the store you're looking for to display all offers of that type in the area.</p>
-<? if($model->rows !== null){
-    <?= ListView::widget([
+<?= if($model->rows !== null){
+     ListView::widget([
 		'dataProvider' => $provider,
 		'itemView' => function($model)
 	{return'<div class="row">
