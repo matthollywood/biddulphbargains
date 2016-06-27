@@ -243,7 +243,7 @@ public function actionStores()
   'query' => Catfind::find(),
   'pagination' => [
     'pageSize' => 10,
-  ];
+  ]]);
 
 $query = new Query;
 $query->select(['tbl_stores.store_name'])
