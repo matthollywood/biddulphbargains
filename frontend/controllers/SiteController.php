@@ -239,6 +239,12 @@ class SiteController extends Controller
 public function actionStores()
 {
 
+  $provider = new \yii\data\ActiveDataProvider([
+  'query' => Catfind::find(),
+  'pagination' => [
+    'pageSize' => 10,
+  ],
+
 $query = new Query;
 $query->select(['tbl_stores.store_name'])
       ->from('tbl_stores')
